@@ -1,0 +1,9 @@
+@import "./mixins.scss";
+@import "./components/button.scss";
+@import "./pages/page.scss";
+
+body {
+  //body margin reset
+  margin: 0;
+  padding: 0;
+}

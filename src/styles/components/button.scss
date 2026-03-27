@@ -1,0 +1,17 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-variant {
+  button {
+    @extend .btn;
+  }
+}

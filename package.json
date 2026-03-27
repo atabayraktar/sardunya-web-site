@@ -1,0 +1,24 @@
+{
+  "name": "sardunya-web-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "preview": "npx serve -s out",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "firebase": "^12.1.0",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "sass": "latest",
+    "swiper": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest"
+  }
+}
