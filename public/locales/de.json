@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "title": "Sardunya Mädchenwohnheim | Çanakkale",
+    "description": "Das sicherste und komfortabelste Mädchenwohnheim in Çanakkale. Wir bieten Studentinnen ein friedliches Wohnumfeld mit 14 Jahren Erfahrung."
+  },
+  "nav": [
+    { "href": "#sertifikalar", "label": "Zertifikate" },
+    { "href": "#odalar",       "label": "Zimmer" },
+    { "href": "#hizmetler",    "label": "Leistungen" },
+    { "href": "#tesisler",     "label": "Einrichtungen" },
+    { "href": "#kayit",        "label": "Anmeldung" },
+    { "href": "#iletisim",     "label": "Kontakt & Lage" },
+    { "href": "#hakkimizda",   "label": "Über Uns" },
+    { "href": "#galeri",       "label": "Galerie" }
+  ],
+  "hero": {
+    "title": "Sardunya",
+    "subtitle": "Mädchenwohnheim",
+    "sub": "Gestalten Sie Ihre Zukunft in sicheren, komfortablen und modernen Wohnräumen. Im Herzen von Çanakkale, nur 3 Minuten Fußweg vom Campus.",
+    "cta1": "Voranmeldung",
+    "cta2": "Kontakt aufnehmen"
+  },
+  "stats": [
+    { "val": "200+", "lbl": "Zufriedene Studierende" },
+    { "val": "14",   "lbl": "Jahre Erfahrung" },
+    { "val": "7/24", "lbl": "Sicherheit" },
+    { "val": "3 Min","lbl": "Entfernung zum Campus" }
+  ],
+  "certsSection": {
+    "label": "Dokumente & Zertifikate",
+    "title": "Beweis unserer Zuverlässigkeit",
+    "sub": "Wir bieten unseren Studentinnen die sicherste Wohnumgebung mit Dokumenten, die alle Standards erfüllen."
+  },
+  "certItems": [
+    { "label": "TSE Zertifiziert",    "icon": "cert" },
+    { "label": "Brandschutz",         "icon": "fire" },
+    { "label": "Hygienezertifikat",   "icon": "hyg"  },
+    { "label": "Qualitätsdokument",   "icon": "med"  },
+    { "label": "ISO 9001",            "icon": "iso"  }
+  ],
+  "roomsSection": {
+    "label": "Unsere Zimmer",
+    "title": "Komfortable Wohnräume"
+  },
+  "roomItems": [
+    { "type": "Wirtschaftlich", "name": "Einzelzimmer",   "price": "₺4.500", "per": "/ Monat",          "tags": ["Eigenes Bad", "Schreibtisch", "Kleiderschrank", "Wi-Fi", "Klimaanlage"] },
+    { "type": "Komfort",        "name": "Doppelzimmer",   "price": "₺3.200", "per": "/ Monat / Person", "tags": ["Gemeinsames Bad", "Schreibtisch", "Kleiderschrank", "Wi-Fi", "Balkon"] },
+    { "type": "Wirtschaftlich", "name": "Dreibettzimmer", "price": "₺2.800", "per": "/ Monat / Person", "tags": ["Gemeinsames Bad", "Schreibtisch", "Kleiderschrank", "Wi-Fi"] }
+  ],
+  "servicesSection": {
+    "label": "Unsere Leistungen",
+    "title": "Alles, was Sie brauchen"
+  },
+  "serviceItems": [
+    { "title": "Verpflegung",       "desc": "3 Mahlzeiten täglich unter diätistischer Aufsicht.",   "icon": "food"    },
+    { "title": "24/7 Sicherheit",   "desc": "CCTV-System und Sicherheitspersonal.",                 "icon": "sec"     },
+    { "title": "Lernsaal",          "desc": "Ruhige und moderne Lernumgebungen.",                   "icon": "study"   },
+    { "title": "Waschsalon",        "desc": "7 Tage geöffnet, kostenlose Waschmaschinen.",          "icon": "laundry" },
+    { "title": "Fitnessstudio",     "desc": "Moderne Fitnessgeräte.",                               "icon": "gym"     },
+    { "title": "Sozialbereiche",    "desc": "TV-Lounge, Sitzbereich und Cafeteria.",                "icon": "soc"     },
+    { "title": "Bibliothek",        "desc": "Große Buchsammlung und Leseecke.",                     "icon": "lib"     },
+    { "title": "Cafeteria",         "desc": "Günstige Snacks und Getränke.",                        "icon": "cafe"    },
+    { "title": "Gesundheitsraum",   "desc": "Erste-Hilfe und Notfallunterstützung.",                "icon": "medr"    },
+    { "title": "Schnelles Internet","desc": "Glasfaser-Infrastruktur, unbegrenztes WLAN.",          "icon": "wifi"    },
+    { "title": "Shuttle",           "desc": "Regelmäßiger kostenloser Shuttle zum Campus.",         "icon": "bus"     },
+    { "title": "Reinigung",         "desc": "Wöchentliche professionelle Zimmerreinigung.",         "icon": "clean"   }
+  ],
+  "facilitiesSection": {
+    "label": "Unsere Einrichtungen",
+    "title": "Moderne & gut ausgestattete Einrichtungen",
+    "sub": "Wir bieten moderne Einrichtungen zur Unterstützung der akademischen und sozialen Entwicklung unserer Studentinnen."
+  },
+  "facilityItems": [
+    { "title": "Speisesaal",      "desc": "Geräumiger und moderner Speisesaal, 3 Mahlzeiten täglich unter diätistischer Aufsicht." },
+    { "title": "Küche",           "desc": "Voll ausgestattete Gemeinschaftsküche, in der Studentinnen ihre eigenen Mahlzeiten zubereiten können." },
+    { "title": "Lernsaal",        "desc": "Ruhige und moderne Lernumgebung, ausgestattet mit Hochgeschwindigkeits-WLAN." },
+    { "title": "Aufenthaltsraum", "desc": "Geräumiger Gemeinschaftsraum mit TV, Sofas und Bereichen für soziale Aktivitäten." }
+  ],
+  "regDocsSection": {
+    "label": "Anmeldung",
+    "title": "Erforderliche Dokumente für die Anmeldung",
+    "sub": "Bitte bereiten Sie folgende Dokumente vor, um sich in unserem Wohnheim anzumelden.",
+    "items": [
+      "Kopie des Personalausweises",
+      "Wohnsitzbescheinigung (letzte 3 Monate)",
+      "Studentenbescheinigung",
+      "4 Passfotos",
+      "Elterliche Einverständniserklärung (unter 18)",
+      "Gesundheitsbericht",
+      "Einkommensnachweis (für Stipendienantrag)",
+      "Strafregisterauszug"
+    ],
+    "note": "Vollständige Unterlagen beschleunigen den Anmeldeprozess. Für detaillierte Informationen können Sie uns anrufen oder das Voranmeldeformular ausfüllen."
+  },
+  "contactSection": {
+    "label": "Kontakt & Lage",
+    "title": "Wie Sie uns erreichen?",
+    "contactTitle": "Kontaktinformationen",
+    "address": "Terzioğlu Mah. Cumhuriyet Cad. No:24, Merkez / Çanakkale",
+    "addressShort": "Terzioğlu Mah. Cumhuriyet Cad. No:24, Çanakkale",
+    "phone": "+90 286 217 00 00",
+    "email": "info@sardunya.com.tr",
+    "hours": "Mo–Fr 08:00–18:00 | Sa 09:00–14:00"
+  },
+  "aboutSection": {
+    "label": "Über Uns",
+    "title": "14 Jahre Vertrauen und Erfahrung",
+    "text": "Das Sardunya Mädchenwohnheim, 2010 in Çanakkale gegründet, hat Tausenden von Studentinnen einen sicheren, komfortablen und friedlichen Wohnraum geboten. Mit unserem erfahrenen Personal und modernen Einrichtungen haben wir es uns zur Priorität gemacht, zum akademischen Erfolg und zur sozialen Entwicklung unserer Studentinnen beizutragen.",
+    "points": [
+      "Wir haben seit 2010 mehr als 200 Studentinnen beherbergt.",
+      "Wir besitzen alle Sicherheits- und Hygienezertifikate.",
+      "Unser erfahrenes Personal steht unseren Studentinnen stets zur Seite.",
+      "Wir haben eine Studentenzufriedenheitsrate von 97%."
+    ]
+  },
+  "gallerySection": {
+    "label": "Galerie",
+    "title": "Entdecken Sie unser Wohnheim"
+  },
+  "footer": {
+    "copy": "© 2026 Sardunya Mädchenwohnheim. Alle Rechte vorbehalten."
+  },
+  "popup": {
+    "title": "Voranmeldeformular",
+    "sub": "Hinterlassen Sie Ihre Informationen und wir rufen Sie so schnell wie möglich zurück.",
+    "nameLbl": "Vollständiger Name",
+    "namePh": "Ihr vollständiger Name",
+    "phoneLbl": "Telefon",
+    "phonePh": "+90 5xx xxx xx xx",
+    "emailLbl": "E-Mail",
+    "emailPh": "beispiel@email.com",
+    "roomLbl": "Bevorzugter Zimmertyp",
+    "roomPh": "Auswählen...",
+    "roomOptions": ["Einzelzimmer", "Doppelzimmer", "Dreibettzimmer"],
+    "noteLbl": "Ihre Notiz",
+    "notePh": "Möchten Sie etwas hinzufügen?",
+    "cta": "Voranmeldung absenden",
+    "ctaRoom": "Voranmeldeformular"
+  }
+}

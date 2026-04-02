@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "title": "Sardunya Kız Öğrenci Yurdu | Çanakkale",
+    "description": "Çanakkale'nin en güvenli ve konforlu kız öğrenci yurdu. 14 yıllık deneyimle öğrencilere huzurlu yaşam alanları sunuyoruz."
+  },
+  "nav": [
+    { "href": "#sertifikalar", "label": "Sertifikalar" },
+    { "href": "#odalar",       "label": "Odalar" },
+    { "href": "#hizmetler",    "label": "Hizmetler" },
+    { "href": "#tesisler",     "label": "Tesisler" },
+    { "href": "#kayit",        "label": "Kayıt Belgeleri" },
+    { "href": "#iletisim",     "label": "İletişim & Ulaşım" },
+    { "href": "#hakkimizda",   "label": "Hakkımızda" },
+    { "href": "#galeri",       "label": "Galeri" }
+  ],
+  "hero": {
+    "title": "Sardunya",
+    "subtitle": "Kız Öğrenci Yurdu",
+    "sub": "Güvenli, konforlu ve modern yaşam alanlarında geleceğinizi inşa edin. Çanakkale'nin kalbinde, kampüse 3 dakika yürüme mesafesinde.",
+    "cta1": "Ön Kayıt Formu",
+    "cta2": "Bize Ulaşın"
+  },
+  "stats": [
+    { "val": "200+", "lbl": "Mutlu Öğrenci" },
+    { "val": "14",   "lbl": "Yıl Deneyim" },
+    { "val": "7/24", "lbl": "Güvenlik" },
+    { "val": "3 dk", "lbl": "Kampüse Mesafe" }
+  ],
+  "certsSection": {
+    "label": "Belgeler & Sertifikalar",
+    "title": "Güvenilirliğimizin Kanıtı",
+    "sub": "Tüm standartları karşılayan belgelerimizle öğrencilerimize en güvenli yaşam ortamını sunuyoruz."
+  },
+  "certItems": [
+    { "label": "TSE Belgeli",        "icon": "cert" },
+    { "label": "Yangın Güvenliği",   "icon": "fire" },
+    { "label": "Hijyen Sertifikası", "icon": "hyg"  },
+    { "label": "Kalite Belgesi",     "icon": "med"  },
+    { "label": "ISO 9001",           "icon": "iso"  }
+  ],
+  "roomsSection": {
+    "label": "Odalarımız",
+    "title": "Konforlu Yaşam Alanları"
+  },
+  "roomItems": [
+    { "type": "Ekonomik", "name": "Tek Kişilik Oda",  "price": "₺4.500", "per": "/ ay",          "tags": ["Özel Banyo", "Çalışma Masası", "Dolap", "Wi-Fi", "Klima"] },
+    { "type": "Konforlu", "name": "Çift Kişilik Oda", "price": "₺3.200", "per": "/ ay / kişi",   "tags": ["Ortak Banyo", "Çalışma Masası", "Dolap", "Wi-Fi", "Balkon"] },
+    { "type": "Ekonomik", "name": "Üç Kişilik Oda",   "price": "₺2.800", "per": "/ ay / kişi",   "tags": ["Ortak Banyo", "Çalışma Masası", "Dolap", "Wi-Fi"] }
+  ],
+  "servicesSection": {
+    "label": "Hizmetlerimiz",
+    "title": "Her İhtiyacınız Burada"
+  },
+  "serviceItems": [
+    { "title": "Yemek Hizmeti",  "desc": "Günde 3 öğün diyetisyen gözetiminde.",          "icon": "food"    },
+    { "title": "7/24 Güvenlik",  "desc": "Kamera sistemi ve güvenlik personeli.",          "icon": "sec"     },
+    { "title": "Etüt Salonu",    "desc": "Sessiz ve modern çalışma ortamları.",             "icon": "study"   },
+    { "title": "Çamaşırhane",    "desc": "7 gün açık, ücretsiz çamaşır makineleri.",       "icon": "laundry" },
+    { "title": "Spor Salonu",    "desc": "Modern fitness ekipmanları.",                     "icon": "gym"     },
+    { "title": "Sosyal Alanlar", "desc": "TV salonu, oturma ve kafeterya.",                 "icon": "soc"     },
+    { "title": "Kütüphane",      "desc": "Geniş kitap koleksiyonu ve okuma köşesi.",        "icon": "lib"     },
+    { "title": "Kafeterya",      "desc": "Uygun fiyatlı atıştırmalık ve içecekler.",        "icon": "cafe"    },
+    { "title": "Sağlık Odası",   "desc": "İlk yardım ve acil müdahale desteği.",            "icon": "medr"    },
+    { "title": "Hızlı İnternet", "desc": "Fiber altyapılı, sınırsız Wi-Fi.",                "icon": "wifi"    },
+    { "title": "Servis Aracı",   "desc": "Kampüse düzenli ücretsiz servis.",                "icon": "bus"     },
+    { "title": "Temizlik",       "desc": "Haftalık profesyonel oda temizliği.",              "icon": "clean"   }
+  ],
+  "facilitiesSection": {
+    "label": "Tesislerimiz",
+    "title": "Modern & Donanımlı Tesisler",
+    "sub": "Öğrencilerimizin akademik ve sosyal gelişimini desteklemek için modern tesisler sunuyoruz."
+  },
+  "facilityItems": [
+    { "title": "Yemekhane",       "desc": "Geniş ve modern yemek salonu, günde 3 öğün diyetisyen gözetiminde hizmet." },
+    { "title": "Mutfak",          "desc": "Öğrencilerin kendi yemeklerini hazırlayabileceği tam donanımlı ortak mutfak." },
+    { "title": "Etüt Salonu",     "desc": "Sessiz ve modern çalışma ortamı, yüksek hızlı Wi-Fi ile donatılmış." },
+    { "title": "Dinlenme Salonu", "desc": "TV, koltuklar ve sosyal aktivite alanlarıyla ferah ortak yaşam salonu." }
+  ],
+  "regDocsSection": {
+    "label": "Kayıt İşlemleri",
+    "title": "Kayıt İçin Gerekli Belgeler",
+    "sub": "Yurdumuza kayıt yaptırmak için aşağıdaki belgeleri hazırlayınız.",
+    "items": [
+      "Nüfus cüzdanı fotokopisi",
+      "İkametgâh belgesi (son 3 ay)",
+      "Öğrenci belgesi",
+      "4 adet vesikalık fotoğraf",
+      "Veli izin belgesi (18 yaş altı)",
+      "Sağlık raporu",
+      "Gelir belgesi (burs başvurusu için)",
+      "Adli sicil kaydı"
+    ],
+    "note": "Belgelerinizi eksiksiz getirmeniz kayıt sürecini hızlandıracaktır. Ayrıntılı bilgi için bizi arayabilir veya ön kayıt formunu doldurabilirsiniz."
+  },
+  "contactSection": {
+    "label": "İletişim & Konum",
+    "title": "Bize Nasıl Ulaşırsınız?",
+    "contactTitle": "İletişim Bilgileri",
+    "address": "Terzioğlu Mah. Cumhuriyet Cad. No:24, Merkez / Çanakkale",
+    "addressShort": "Terzioğlu Mah. Cumhuriyet Cad. No:24, Çanakkale",
+    "phone": "+90 286 217 00 00",
+    "email": "info@sardunya.com.tr",
+    "hours": "Pzt–Cum 08:00–18:00 | Cmt 09:00–14:00"
+  },
+  "aboutSection": {
+    "label": "Hakkımızda",
+    "title": "14 Yıllık Güven ve Deneyim",
+    "text": "2010 yılında Çanakkale'de kurulan Sardunya Kız Öğrenci Yurdu, bugüne kadar binlerce öğrenciye güvenli, konforlu ve huzurlu bir yaşam alanı sunmuştur. Deneyimli kadromuz ve modern tesislerimizle öğrencilerimizin akademik başarısına ve sosyal gelişimine katkı sağlamayı önceliğimiz olarak benimsedik.",
+    "points": [
+      "2010'dan bu yana 200'den fazla öğrenciye ev sahipliği yaptık.",
+      "Tüm güvenlik ve hijyen sertifikalarına sahibiz.",
+      "Deneyimli kadromuz öğrencilerimizin yanındadır.",
+      "Öğrenci memnuniyetinde yüzde 97 oranına sahibiz."
+    ]
+  },
+  "gallerySection": {
+    "label": "Galeri",
+    "title": "Yurdumuzu Keşfedin"
+  },
+  "footer": {
+    "copy": "© 2026 Sardunya Kız Öğrenci Yurdu. Tüm hakları saklıdır."
+  },
+  "popup": {
+    "title": "Ön Kayıt Formu",
+    "sub": "Bilgilerinizi bırakın, sizi en kısa sürede arayalım.",
+    "nameLbl": "Ad Soyad",
+    "namePh": "Adınız Soyadınız",
+    "phoneLbl": "Telefon",
+    "phonePh": "+90 5xx xxx xx xx",
+    "emailLbl": "E-posta",
+    "emailPh": "ornek@email.com",
+    "roomLbl": "Tercih Ettiğiniz Oda Tipi",
+    "roomPh": "Seçiniz...",
+    "roomOptions": ["Tek Kişilik Oda", "Çift Kişilik Oda", "Üç Kişilik Oda"],
+    "noteLbl": "Notunuz",
+    "notePh": "Eklemek istediğiniz bir şey var mı?",
+    "cta": "Ön Kayıt Yaptır",
+    "ctaRoom": "Ön Kayıt Formu"
+  }
+}
