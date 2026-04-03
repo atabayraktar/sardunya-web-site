@@ -6,27 +6,25 @@ import { Navigation, Pagination, Autoplay } from "swiper";
 // ─── Static image data (not translated) ──────────────────────────────────────
 const ROOM_IMGS = [
   [
-    "https://placehold.co/600x480/f9e4ea/b04060?text=Tek+Kisilik+1",
-    "https://placehold.co/600x480/f0d0da/a03050?text=Tek+Kisilik+2",
-    "https://placehold.co/600x480/f9e4ea/b04060?text=Tek+Kisilik+3",
+    "/images/1-kisilik-1.jpg",
+    "/images/1-kisilik-2.jpg",
   ],
   [
-    "https://placehold.co/600x480/f9e4ea/b04060?text=Cift+Kisilik+1",
-    "https://placehold.co/600x480/f0d0da/a03050?text=Cift+Kisilik+2",
-    "https://placehold.co/600x480/f9e4ea/b04060?text=Cift+Kisilik+3",
+    "/images/2-kisilik-1.jpg",
+    "/images/2-kisilik-2.jpg",
   ],
   [
-    "https://placehold.co/600x480/f9e4ea/b04060?text=Uc+Kisilik+1",
-    "https://placehold.co/600x480/f0d0da/a03050?text=Uc+Kisilik+2",
-    "https://placehold.co/600x480/f9e4ea/b04060?text=Uc+Kisilik+3",
+    "/images/3-kisilik-1.jpg",
+    "/images/3-kisilik-2.jpg",
+    "/images/3-kisilik-3.jpg",
   ],
 ];
 
 const FAC_IMGS = [
-  "https://placehold.co/600x340/f5eed6/b08020?text=Yemekhane",
-  "https://placehold.co/600x340/f9e4ea/b04060?text=Mutfak",
-  "https://placehold.co/600x340/ede8f5/8e6bbd?text=Etut+Salonu",
-  "https://placehold.co/600x340/eaf5ec/5d9e6e?text=Dinlenme+Salonu",
+  "/images/yemekhane.jpg",
+  "/images/mutfak.png",
+  "/images/etut.jpg",
+  "/images/dinlenme.jpg",
 ];
 
 const GALLERY_IMGS = [
@@ -71,6 +69,14 @@ function RegIcon()     { return <svg viewBox="0 0 24 24" fill="none" stroke="cur
 function ParkIcon()    { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round"><path d="M12 22V12"/><path d="M5 12h14"/><path d="M12 12C12 7 7 4 7 4s5 1 5 8z"/><path d="M12 12C12 7 17 4 17 4s-5 1-5 8z"/><path d="M8 22h8"/></svg>; }
 function ShopIcon()    { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>; }
 function UniIcon()     { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>; }
+function DropIcon()    { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>; }
+function ThermoIcon()  { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/></svg>; }
+function BuildIcon()   { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>; }
+function SunIcon()     { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>; }
+function MonitorIcon() { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>; }
+function TvIcon()      { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg>; }
+function UtensilsIcon(){ return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round"><path d="M4 9h16l-2 10a2 2 0 01-2 2H8a2 2 0 01-2-2L4 9z"/><path d="M2 9h20"/><path d="M8 9V6a4 4 0 018 0v3"/><line x1="12" y1="14" x2="12" y2="17"/></svg>; }
+function CameraIcon()  { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>; }
 
 // ─── Nearby Places Icon Map ───────────────────────────────────────────────────
 const NEARBY_ICON_MAP = {
@@ -88,6 +94,8 @@ const ICON_MAP = {
   laundry: <LaundryIcon />, gym: <GymIcon />, soc: <SocIcon />, lib: <LibIcon />,
   cafe: <CafeIcon />, medr: <MedRIcon />, wifi: <WifiIcon />, bus: <BusIcon />,
   clean: <CleanIcon />,
+  drop: <DropIcon />, thermo: <ThermoIcon />, build: <BuildIcon />, sun: <SunIcon />,
+  monitor: <MonitorIcon />, tv: <TvIcon />, utensils: <UtensilsIcon />, camera: <CameraIcon />,
 };
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -254,9 +262,7 @@ export default function Home({ locales }) {
                   <img src={ROOM_IMGS[i][0]} alt={r.name} />
                 </div>
                 <div className="room-card__overlay">
-                  <span className="room-card__label">{r.type}</span>
                   <h3 className="room-card__name">{r.name}</h3>
-                  <div className="room-card__price">{r.price}<small>{r.per}</small></div>
                 </div>
               </div>
             ))}
@@ -294,7 +300,7 @@ export default function Home({ locales }) {
           <div className="facilities__grid">
             {t.facilityItems.map((f, i) => (
               <div key={f.title} className="fac-card">
-                <div className="fac-card__image">
+                <div className="fac-card__image" onClick={() => setLightbox({ imgs: FAC_IMGS, idx: i })} style={{ cursor: "zoom-in" }}>
                   <img src={FAC_IMGS[i]} alt={f.title} loading="lazy" />
                 </div>
                 <div className="fac-card__body">
@@ -379,7 +385,7 @@ export default function Home({ locales }) {
         <div className="container">
           <div className="about__layout">
             <div className="about__image">
-              <img src="https://placehold.co/600x450/f9e4ea/b04060?text=Sardunya+Yurdu" alt="Sardunya Kız Öğrenci Yurdu" loading="lazy" />
+              <img src="/images/dis-foto.jpg" alt="Sardunya Kız Öğrenci Yurdu" loading="lazy" />
             </div>
             <div>
               <div className="about__head">

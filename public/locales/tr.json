@@ -43,27 +43,27 @@
     "title": "Konforlu Yaşam Alanları"
   },
   "roomItems": [
-    { "type": "Ekonomik", "name": "Tek Kişilik Oda",  "price": "₺4.500", "per": "/ ay",          "tags": ["Özel Banyo", "Çalışma Masası", "Dolap", "Wi-Fi", "Klima"] },
-    { "type": "Konforlu", "name": "Çift Kişilik Oda", "price": "₺3.200", "per": "/ ay / kişi",   "tags": ["Ortak Banyo", "Çalışma Masası", "Dolap", "Wi-Fi", "Balkon"] },
-    { "type": "Ekonomik", "name": "Üç Kişilik Oda",   "price": "₺2.800", "per": "/ ay / kişi",   "tags": ["Ortak Banyo", "Çalışma Masası", "Dolap", "Wi-Fi"] }
+    { "name": "Tek Kişilik Oda",  "tags": ["Televizyon", "Ortak Buzdolabı", "Kendine Ait Çalışma Masası", "Kıyafet Dolabı", "1. Kalite Mefruşat", "WC-Banyo"] },
+    { "name": "Çift Kişilik Oda", "tags": ["Televizyon", "Ortak Buzdolabı", "Kendinize Ait Masa", "Kendinize Ait Dolap", "Teras", "WC-Banyo"] },
+    { "name": "Üç Kişilik Oda",   "tags": ["Televizyon", "Ortak Buzdolabı", "Kendinize Ait Masa", "Kendinize Ait Dolap", "Balkon", "WC-Banyo"] }
   ],
   "servicesSection": {
     "label": "Hizmetlerimiz",
     "title": "Her İhtiyacınız Burada"
   },
   "serviceItems": [
-    { "title": "Yemek Hizmeti",  "desc": "Günde 3 öğün diyetisyen gözetiminde.",          "icon": "food"    },
-    { "title": "7/24 Güvenlik",  "desc": "Kamera sistemi ve güvenlik personeli.",          "icon": "sec"     },
-    { "title": "Etüt Salonu",    "desc": "Sessiz ve modern çalışma ortamları.",             "icon": "study"   },
-    { "title": "Çamaşırhane",    "desc": "7 gün açık, ücretsiz çamaşır makineleri.",       "icon": "laundry" },
-    { "title": "Spor Salonu",    "desc": "Modern fitness ekipmanları.",                     "icon": "gym"     },
-    { "title": "Sosyal Alanlar", "desc": "TV salonu, oturma ve kafeterya.",                 "icon": "soc"     },
-    { "title": "Kütüphane",      "desc": "Geniş kitap koleksiyonu ve okuma köşesi.",        "icon": "lib"     },
-    { "title": "Kafeterya",      "desc": "Uygun fiyatlı atıştırmalık ve içecekler.",        "icon": "cafe"    },
-    { "title": "Sağlık Odası",   "desc": "İlk yardım ve acil müdahale desteği.",            "icon": "medr"    },
-    { "title": "Hızlı İnternet", "desc": "Fiber altyapılı, sınırsız Wi-Fi.",                "icon": "wifi"    },
-    { "title": "Servis Aracı",   "desc": "Kampüse düzenli ücretsiz servis.",                "icon": "bus"     },
-    { "title": "Temizlik",       "desc": "Haftalık profesyonel oda temizliği.",              "icon": "clean"   }
+    { "title": "Sınırsız İnternet",             "desc": "Sınırsız ve hızlı internet sayesinde kesintisiz internetin tadını çıkarın.",                                                                          "icon": "wifi"     },
+    { "title": "Kesintisiz Sıcak Su",           "desc": "7/24 Kesintisiz sıcak su imkanı.",                                                                                                                   "icon": "drop"     },
+    { "title": "Doğalgazlı Isınma Sistemi",     "desc": "Kışın 7/24 merkezi doğalgazlı ısınma sistemi.",                                                                                                      "icon": "thermo"   },
+    { "title": "Depreme Dayanıklılık Belgesi",  "desc": "Can güveniliğiniz bizim için önemli, o yüzden binamız deprem yönetmeliğine uygun tasarlandı.",                                                        "icon": "build"    },
+    { "title": "Açık Büfe Sabah Kahvaltısı",    "desc": "Evinizdeki kahvaltıyı aratmayacak enfes bir kahvaltı imkanı sunuyoruz. Haftasonu geç kahvaltı imkanı.",                                               "icon": "food"     },
+    { "title": "Yaz Dönemleri Pansiyon",        "desc": "Yaz dönemleri ailelere pansiyon hizmetimiz vardır.",                                                                                                  "icon": "sun"      },
+    { "title": "Etüt Salonu",                   "desc": "Derslerinize sınavlarınıza kolaylıkla hazırlanabileceğiniz sessiz bir ortam imkanı.",                                                                 "icon": "study"    },
+    { "title": "İnternet Salonu",               "desc": "İnternetin keyfini doya doya çıkarabileceğiniz bir ortam imkanı.",                                                                                    "icon": "monitor"  },
+    { "title": "TV ve Dinlenme Salonu",         "desc": "Günün yorgunluğunu atabileceğiniz, ister film ister dizi izleyebileceğiniz TV ve dinlenme salonu imkanı.",                                            "icon": "tv"       },
+    { "title": "Donanımlı Mutfak",              "desc": "İçerisinde her çeşit mutfak malzemesi bulunan donanımlı mutfağımızda dilerseniz kendi yemeklerinizi kendiniz hazırlayabilirsiniz.",                   "icon": "utensils" },
+    { "title": "Ücretsiz Çamaşır Hizmeti",      "desc": "Çamaşırlarınızı yıkatabileceğiniz ücretsiz çamaşır hizmeti imkanı.",                                                                                 "icon": "laundry"  },
+    { "title": "7/24 Kameralı Güvenlik",        "desc": "Güvenliğiniz için yurdumuz 7/24 güvenlik kameraları ile izlenmektedir.",                                                                              "icon": "camera"   }
   ],
   "facilitiesSection": {
     "label": "Tesislerimiz",
@@ -71,24 +71,22 @@
     "sub": "Öğrencilerimizin akademik ve sosyal gelişimini desteklemek için modern tesisler sunuyoruz."
   },
   "facilityItems": [
-    { "title": "Yemekhane",       "desc": "Geniş ve modern yemek salonu, günde 3 öğün diyetisyen gözetiminde hizmet." },
-    { "title": "Mutfak",          "desc": "Öğrencilerin kendi yemeklerini hazırlayabileceği tam donanımlı ortak mutfak." },
-    { "title": "Etüt Salonu",     "desc": "Sessiz ve modern çalışma ortamı, yüksek hızlı Wi-Fi ile donatılmış." },
-    { "title": "Dinlenme Salonu", "desc": "TV, koltuklar ve sosyal aktivite alanlarıyla ferah ortak yaşam salonu." }
+    { "title": "Yemekhane",       "desc": "Anlaşmalı olduğumuz catering firmasından ücretli olarak sipariş edebileceğiniz yemekleri afiyetle yiyebileceğiniz geniş yemekhanemiz." },
+    { "title": "Mutfak",          "desc": "İstediğinizde kendi yemeğinizi atıştırmalıklarınızı hazırlayabileceğiniz 7/24 mutfak imkanı." },
+    { "title": "Etüt Salonu",     "desc": "Sınav haftalarınızda veya günlük derslerinize hazırlanırken kullanabileceğiniz sessiz ferah bir çalışma ortamı bulunan etüt salonumuz." },
+    { "title": "Dinlenme Salonu", "desc": "Günün yorgunluğunu atabileceğiniz, tv izleyip arkadaşlarınızla sohbet edebileceğiniz bir ortam." }
   ],
   "regDocsSection": {
     "label": "Kayıt İşlemleri",
     "title": "Kayıt İçin Gerekli Belgeler",
     "sub": "Yurdumuza kayıt yaptırmak için aşağıdaki belgeleri hazırlayınız.",
     "items": [
-      "Nüfus cüzdanı fotokopisi",
-      "İkametgâh belgesi (son 3 ay)",
-      "Öğrenci belgesi",
-      "4 adet vesikalık fotoğraf",
-      "Veli izin belgesi (18 yaş altı)",
-      "Sağlık raporu",
-      "Gelir belgesi (burs başvurusu için)",
-      "Adli sicil kaydı"
+      "Müracaat Dilekçesi",
+      "Nüfus Cüzdanı Örneği",
+      "Öğrenci Belgesi",
+      "Cumhuriyet Başsavcılığı'ndan Alınacak Adli Sicil Kaydı",
+      "Öğrencinin sağlık durumunun yurtta kalmasına elverişli olduğunu gösteren belge",
+      "4 Adet Fotoğraf"
     ],
     "note": "Belgelerinizi eksiksiz getirmeniz kayıt sürecini hızlandıracaktır. Ayrıntılı bilgi için bizi arayabilir veya ön kayıt formunu doldurabilirsiniz."
   },
