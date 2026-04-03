@@ -100,7 +100,17 @@
     "addressShort": "Terzioğlu Mah. Cumhuriyet Cad. No:24, Çanakkale",
     "phone": "+90 286 217 00 00",
     "email": "info@sardunya.com.tr",
-    "hours": "Pzt–Cum 08:00–18:00 | Cmt 09:00–14:00"
+    "hours": "Pzt–Cum 08:00–18:00 | Cmt 09:00–14:00",
+    "nearbyPlaces": {
+      "title": "Yakın Yerler",
+      "items": [
+        { "name": "ÇOMÜ Terzioğlu Kampüsü", "distance": "500 m", "type": "university" },
+        { "name": "Atatürk Parkı", "distance": "800 m", "type": "park" },
+        { "name": "Devlet Hastanesi", "distance": "1.2 km", "type": "hospital" },
+        { "name": "Merkez / Çarşı", "distance": "1.5 km", "type": "shopping" },
+        { "name": "Otobüs Terminali", "distance": "2.5 km", "type": "bus" }
+      ]
+    }
   },
   "aboutSection": {
     "label": "Hakkımızda",

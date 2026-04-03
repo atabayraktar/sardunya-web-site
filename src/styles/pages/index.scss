@@ -894,6 +894,86 @@ button { font-family: inherit; }
   }
 }
 
+// Nearby Places
+.nearby-places {
+  margin-top: 1.75rem;
+
+  &__title {
+    font-family: var(--font-display);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: rgba(26,26,46,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 1rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    @media (min-width: 480px) { grid-template-columns: repeat(3, 1fr); }
+    @media (min-width: 768px) { grid-template-columns: repeat(5, 1fr); }
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    background: var(--white);
+    border-radius: var(--r-md);
+    padding: 0.75rem 0.875rem;
+    box-shadow: 0 1px 4px rgba(26,26,46,0.07);
+    border: 1.5px solid rgba(26,26,46,0.06);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(212,96,122,0.12);
+      border-color: rgba(212,96,122,0.2);
+    }
+
+    &--university .nearby-places__icon { color: #7c5cbf; background: rgba(124,92,191,0.1); }
+    &--park       .nearby-places__icon { color: #3d9e6b; background: rgba(61,158,107,0.1); }
+    &--hospital   .nearby-places__icon { color: #d4607a; background: rgba(212,96,122,0.1); }
+    &--shopping   .nearby-places__icon { color: #c07a20; background: rgba(192,122,32,0.1); }
+    &--bus        .nearby-places__icon { color: #2980b9; background: rgba(41,128,185,0.1); }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 8px;
+    flex-shrink: 0;
+    svg { width: 15px; height: 15px; }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  &__name {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--dark);
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__distance {
+    font-size: 0.75rem;
+    color: rgba(26,26,46,0.5);
+    margin-top: 0.125rem;
+  }
+}
+
 // Contact form (shared)
 .contact__form-title {
   font-family: var(--font-display);
