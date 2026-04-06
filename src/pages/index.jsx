@@ -28,14 +28,17 @@ const FAC_IMGS = [
 ];
 
 const GALLERY_IMGS = [
-  { src: "https://placehold.co/600x450/f9e4ea/b04060?text=Oda+Gorunumu",  alt: "Oda" },
-  { src: "https://placehold.co/600x450/e8f0ea/5d9e6e?text=Ortak+Alan",    alt: "Ortak alan" },
-  { src: "https://placehold.co/600x450/eaf5ec/5d9e6e?text=Bahce",         alt: "Bahçe" },
-  { src: "https://placehold.co/600x450/f9e4ea/b04060?text=Cift+Kisilik",  alt: "Çift kişilik" },
-  { src: "https://placehold.co/600x450/f5eed6/b08020?text=Yemekhane",     alt: "Yemekhane" },
-  { src: "https://placehold.co/600x450/ede8f5/8e6bbd?text=Etut+Salonu",   alt: "Etüt salonu" },
-  { src: "https://placehold.co/600x450/eaf5ec/5d9e6e?text=Bahce+2",       alt: "Bahçe 2" },
-  { src: "https://placehold.co/600x450/f9e4ea/b04060?text=Uc+Kisilik",    alt: "Üç kişilik" },
+  { src: "/images/dis-foto.jpg",    alt: "Sardunya Kız Öğrenci Yurdu" },
+  { src: "/images/manzara.jpg",     alt: "Manzara" },
+  { src: "/images/1-kisilik-1.jpg", alt: "Tek Kişilik Oda" },
+  { src: "/images/2-kisilik-1.jpg", alt: "Çift Kişilik Oda" },
+  { src: "/images/3-kisilik-1.jpg", alt: "Üç Kişilik Oda" },
+  { src: "/images/3-kisilik-2.jpg", alt: "Üç Kişilik Oda 2" },
+  { src: "/images/1-kisilik-2.jpg", alt: "Tek Kişilik Oda 2" },
+  { src: "/images/yemekhane.jpg",   alt: "Yemekhane" },
+  { src: "/images/mutfak.png",      alt: "Mutfak" },
+  { src: "/images/etut.jpg",        alt: "Etüt Salonu" },
+  { src: "/images/dinlenme.jpg",    alt: "Dinlenme Alanı" },
 ];
 
 // ─── SVG Icons ────────────────────────────────────────────────────────────────
@@ -103,10 +106,29 @@ export default function Home({ locales }) {
   const [lang,     setLang]     = useState("tr");
   const t = locales[lang];
 
-  const [menuOpen,  setMenuOpen]  = useState(false);
-  const [popupOpen, setPopupOpen] = useState(false);
-  const [roomPopup, setRoomPopup] = useState(null);
-  const [lightbox,  setLightbox]  = useState(null);
+  const [menuOpen,    setMenuOpen]    = useState(false);
+  const [popupOpen,   setPopupOpen]   = useState(false);
+  const [roomPopup,   setRoomPopup]   = useState(null);
+  const [lightbox,    setLightbox]    = useState(null);
+  const [formErrors,  setFormErrors]  = useState({});
+  const [isMounted,   setIsMounted]   = useState(false);
+
+  const openPopup = () => { setFormErrors({}); setPopupOpen(true); };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    const f = e.target;
+    const required = ["p-name", "p-phone", "p-email", "p-dept", "p-grade", "p-room"];
+    const errors = {};
+    required.forEach((id) => {
+      if (!f[id]?.value?.trim()) errors[id] = true;
+    });
+    if (Object.keys(errors).length) { setFormErrors(errors); return; }
+    setFormErrors({});
+    setPopupOpen(false);
+  };
+
+  useEffect(() => { setIsMounted(true); }, []);
 
   useEffect(() => {
     const locked = menuOpen || popupOpen || roomPopup !== null || lightbox !== null;
@@ -133,8 +155,14 @@ export default function Home({ locales }) {
           <div className="container">
             <div className="topbar__inner">
               <div className="topbar__contact">
-                <a href="tel:+902862170000" className="topbar__item"><PhoneIcon /> {t.contactSection.phone}</a>
-                <a href="mailto:info@sardunya.com.tr" className="topbar__item"><MailIcon /> {t.contactSection.email}</a>
+                <span className="topbar__item"><PhoneIcon /> {t.contactSection.phones.map((phone, i) => (
+                  <span key={phone}>{i > 0 && " / "}<a href={`tel:${phone.replace(/\s/g, "")}`} className="topbar__phone-link">{phone}</a></span>
+                ))}</span>
+                <a href={`mailto:${t.contactSection.email}`} className="topbar__item"><MailIcon /> {t.contactSection.email}</a>
+                <div className="topbar__social">
+                  <a href="https://www.instagram.com/sardunyakizyurdu" target="_blank" rel="noopener noreferrer" className="topbar__social-link" aria-label="Instagram"><IgIcon /></a>
+                  <a href="https://www.facebook.com/profile.php?id=100070014077020" target="_blank" rel="noopener noreferrer" className="topbar__social-link" aria-label="Facebook"><FbIcon /></a>
+                </div>
               </div>
               <div className="topbar__right">
                 <div className="topbar__langs">
@@ -147,10 +175,6 @@ export default function Home({ locales }) {
                       {l.toUpperCase()}
                     </button>
                   ))}
-                </div>
-                <div className="topbar__social">
-                  <a href="https://www.instagram.com/sardunyakizyurdu" target="_blank" rel="noopener noreferrer" className="topbar__social-link" aria-label="Instagram"><IgIcon /></a>
-                  <a href="https://www.facebook.com/profile.php?id=100070014077020" target="_blank" rel="noopener noreferrer" className="topbar__social-link" aria-label="Facebook"><FbIcon /></a>
                 </div>
               </div>
             </div>
@@ -189,7 +213,7 @@ export default function Home({ locales }) {
             {t.nav.map((n) => (
               <a key={n.href} href={n.href} onClick={closeMenu}>{n.label}</a>
             ))}
-            <button className="btn btn--primary" onClick={() => { closeMenu(); setPopupOpen(true); }}>
+            <button className="btn btn--primary" onClick={() => { closeMenu(); openPopup(); }}>
               {t.popup.ctaRoom}
             </button>
           </nav>
@@ -198,16 +222,22 @@ export default function Home({ locales }) {
 
       {/* ── HERO ── */}
       <section className="hero">
+        <img src="/images/sardunya_hero.svg" className="hero__bg-svg" aria-hidden alt="" />
+        <div className="hero__overlay" aria-hidden />
         <div className="hero__content">
           <h1 className="hero__title">
             {t.hero.title}<br /><em>{t.hero.subtitle}</em>
           </h1>
           <p className="hero__sub">{t.hero.sub}</p>
           <div className="hero__actions">
-            <button className="btn btn--primary" onClick={() => setPopupOpen(true)}>
+            <button className="btn btn--primary" onClick={() => openPopup()}>
               {t.hero.cta1}
             </button>
             <a href="#iletisim" className="btn btn--outline-white">{t.hero.cta2}</a>
+          </div>
+          <div className="hero__pension-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            {t.hero.pensionNote}
           </div>
         </div>
         <div className="hero__stats">
@@ -357,10 +387,14 @@ export default function Home({ locales }) {
               <h3 className="contact-block__title">{t.contactSection.contactTitle}</h3>
               <div className="contact-block__items">
                 <div className="contact-block__item"><MapIcon /> {t.contactSection.address}</div>
-                <a href="tel:+902862170000" className="contact-block__item contact-block__item--link"><PhoneIcon /> {t.contactSection.phone}</a>
-                <a href="mailto:info@sardunya.com.tr" className="contact-block__item contact-block__item--link"><MailIcon /> {t.contactSection.email}</a>
-                <div className="contact-block__item"><ClockIcon /> {t.contactSection.hours}</div>
+                <div className="contact-block__item"><PhoneIcon /> {t.contactSection.phones.map((phone, i) => (
+                  <span key={phone}>{i > 0 && " / "}<a href={`tel:${phone.replace(/\s/g, "")}`} className="contact-block__phone-link">{phone}</a></span>
+                ))}</div>
+                <a href={`mailto:${t.contactSection.email}`} className="contact-block__item contact-block__item--link"><MailIcon /> {t.contactSection.email}</a>
               </div>
+              <button className="btn btn--primary contact-block__cta" onClick={() => openPopup()}>
+                {t.popup.title}
+              </button>
             </div>
           </div>
           <div className="nearby-places">
@@ -422,6 +456,7 @@ export default function Home({ locales }) {
               navigation
               pagination={{ clickable: true }}
               autoplay={{ delay: 3500, disableOnInteraction: false }}
+              loop={isMounted}
               breakpoints={{ 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}
             >
               {GALLERY_IMGS.map((g, i) => (
@@ -447,14 +482,18 @@ export default function Home({ locales }) {
         <div className="container">
           <div className="footer__inner">
             <img src="/images/logo_white.png" alt="Sardunya" className="footer__logo" />
-            <div className="footer__social">
-              <a href="https://www.instagram.com/sardunyakizyurdu" target="_blank" rel="noopener noreferrer" className="footer__social-link" aria-label="Instagram"><IgIcon /></a>
-              <a href="https://www.facebook.com/profile.php?id=100070014077020" target="_blank" rel="noopener noreferrer" className="footer__social-link" aria-label="Facebook"><FbIcon /></a>
-            </div>
-            <div className="footer__contacts">
-              <div className="footer__contact-item"><MapIcon /> {t.contactSection.addressShort}</div>
-              <a href="tel:+902862170000" className="footer__contact-item footer__contact-item--link"><PhoneIcon /> {t.contactSection.phone}</a>
-              <a href="mailto:info@sardunya.com.tr" className="footer__contact-item footer__contact-item--link"><MailIcon /> {t.contactSection.email}</a>
+            <div className="footer__info">
+              <div className="footer__contacts">
+                <div className="footer__contact-item"><MapIcon /> {t.contactSection.addressShort}</div>
+                <div className="footer__contact-item"><PhoneIcon /> {t.contactSection.phones.map((phone, i) => (
+                  <span key={phone}>{i > 0 && " / "}<a href={`tel:${phone.replace(/\s/g, "")}`} className="footer__phone-link">{phone}</a></span>
+                ))}</div>
+                <a href={`mailto:${t.contactSection.email}`} className="footer__contact-item footer__contact-item--link"><MailIcon /> {t.contactSection.email}</a>
+              </div>
+              <div className="footer__social">
+                <a href="https://www.instagram.com/sardunyakizyurdu" target="_blank" rel="noopener noreferrer" className="footer__social-link" aria-label="Instagram"><IgIcon /></a>
+                <a href="https://www.facebook.com/profile.php?id=100070014077020" target="_blank" rel="noopener noreferrer" className="footer__social-link" aria-label="Facebook"><FbIcon /></a>
+              </div>
             </div>
           </div>
           <div className="footer__bottom">
@@ -476,10 +515,11 @@ export default function Home({ locales }) {
         </a>
         <button
           className="fab fab--reg"
-          onClick={() => setPopupOpen(true)}
+          onClick={() => openPopup()}
           aria-label={t.popup.title}
         >
           <RegIcon />
+          <span className="fab__label">{t.hero.cta1}</span>
         </button>
       </div>
 
@@ -526,7 +566,7 @@ export default function Home({ locales }) {
               {roomPopup.tags.map((tag) => <span key={tag} className="room-popup__tag">{tag}</span>)}
             </div>
             <div className="room-popup__price">{roomPopup.price}<small>{roomPopup.per}</small></div>
-            <button className="btn btn--primary contact__submit" onClick={() => { setRoomPopup(null); setPopupOpen(true); }}>
+            <button className="btn btn--primary contact__submit" onClick={() => { setRoomPopup(null); openPopup(); }}>
               {t.popup.ctaRoom}
             </button>
           </div>
@@ -540,26 +580,43 @@ export default function Home({ locales }) {
             <button className="popup__close" onClick={() => setPopupOpen(false)} aria-label="Kapat">✕</button>
             <h2 className="popup__title">{t.popup.title}</h2>
             <p className="popup__sub">{t.popup.sub}</p>
-            <form onSubmit={(e) => { e.preventDefault(); setPopupOpen(false); }}>
+            <form onSubmit={handleFormSubmit} noValidate>
               <div className="contact__form-grid">
                 <div className="fg">
                   <label htmlFor="p-name">{t.popup.nameLbl} <span aria-hidden>*</span></label>
-                  <input id="p-name" type="text" placeholder={t.popup.namePh} required />
+                  <input id="p-name" type="text" placeholder={t.popup.namePh} className={formErrors["p-name"] ? "input--error" : ""} onChange={() => setFormErrors((p) => ({ ...p, "p-name": false }))} />
+                  {formErrors["p-name"] && <span className="form-error"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="1.5"/><path d="M8 5v3.5M8 11h.01" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>{t.popup.errorRequired}</span>}
                 </div>
                 <div className="fg">
                   <label htmlFor="p-phone">{t.popup.phoneLbl} <span aria-hidden>*</span></label>
-                  <input id="p-phone" type="tel" placeholder={t.popup.phonePh} required />
+                  <input id="p-phone" type="tel" placeholder={t.popup.phonePh} className={formErrors["p-phone"] ? "input--error" : ""} onChange={() => setFormErrors((p) => ({ ...p, "p-phone": false }))} />
+                  {formErrors["p-phone"] && <span className="form-error"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="1.5"/><path d="M8 5v3.5M8 11h.01" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>{t.popup.errorRequired}</span>}
                 </div>
                 <div className="fg contact__form-full">
-                  <label htmlFor="p-email">{t.popup.emailLbl}</label>
-                  <input id="p-email" type="email" placeholder={t.popup.emailPh} />
+                  <label htmlFor="p-email">{t.popup.emailLbl} <span aria-hidden>*</span></label>
+                  <input id="p-email" type="email" placeholder={t.popup.emailPh} className={formErrors["p-email"] ? "input--error" : ""} onChange={() => setFormErrors((p) => ({ ...p, "p-email": false }))} />
+                  {formErrors["p-email"] && <span className="form-error"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="1.5"/><path d="M8 5v3.5M8 11h.01" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>{t.popup.errorRequired}</span>}
+                </div>
+                <div className="fg">
+                  <label htmlFor="p-dept">{t.popup.deptLbl} <span aria-hidden>*</span></label>
+                  <input id="p-dept" type="text" placeholder={t.popup.deptPh} className={formErrors["p-dept"] ? "input--error" : ""} onChange={() => setFormErrors((p) => ({ ...p, "p-dept": false }))} />
+                  {formErrors["p-dept"] && <span className="form-error"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="1.5"/><path d="M8 5v3.5M8 11h.01" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>{t.popup.errorRequired}</span>}
+                </div>
+                <div className="fg">
+                  <label htmlFor="p-grade">{t.popup.gradeLbl} <span aria-hidden>*</span></label>
+                  <select id="p-grade" className={formErrors["p-grade"] ? "input--error" : ""} onChange={() => setFormErrors((p) => ({ ...p, "p-grade": false }))}>
+                    <option value="">{t.popup.gradePh}</option>
+                    {t.popup.gradeOptions.map((o) => <option key={o}>{o}</option>)}
+                  </select>
+                  {formErrors["p-grade"] && <span className="form-error"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="1.5"/><path d="M8 5v3.5M8 11h.01" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>{t.popup.errorRequired}</span>}
                 </div>
                 <div className="fg contact__form-full">
-                  <label htmlFor="p-room">{t.popup.roomLbl}</label>
-                  <select id="p-room">
+                  <label htmlFor="p-room">{t.popup.roomLbl} <span aria-hidden>*</span></label>
+                  <select id="p-room" className={formErrors["p-room"] ? "input--error" : ""} onChange={() => setFormErrors((p) => ({ ...p, "p-room": false }))}>
                     <option value="">{t.popup.roomPh}</option>
                     {t.popup.roomOptions.map((o) => <option key={o}>{o}</option>)}
                   </select>
+                  {formErrors["p-room"] && <span className="form-error"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="1.5"/><path d="M8 5v3.5M8 11h.01" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>{t.popup.errorRequired}</span>}
                 </div>
                 <div className="fg contact__form-full">
                   <label htmlFor="p-note">{t.popup.noteLbl}</label>

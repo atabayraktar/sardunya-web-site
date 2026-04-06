@@ -18,7 +18,8 @@
     "subtitle": "Mädchenwohnheim",
     "sub": "Gestalten Sie Ihre Zukunft in sicheren, komfortablen und modernen Wohnräumen. Im Herzen von Çanakkale, nur 3 Minuten Fußweg vom Campus.",
     "cta1": "Voranmeldung",
-    "cta2": "Kontakt aufnehmen"
+    "cta2": "Kontakt aufnehmen",
+    "pensionNote": "In den Sommermonaten steht Familien eine Pensionsunterkunft zur Verfügung."
   },
   "stats": [
     { "val": "200+", "lbl": "Zufriedene Studierende" },
@@ -43,27 +44,27 @@
     "title": "Komfortable Wohnräume"
   },
   "roomItems": [
-    { "type": "Wirtschaftlich", "name": "Einzelzimmer",   "price": "₺4.500", "per": "/ Monat",          "tags": ["Eigenes Bad", "Schreibtisch", "Kleiderschrank", "Wi-Fi", "Klimaanlage"] },
-    { "type": "Komfort",        "name": "Doppelzimmer",   "price": "₺3.200", "per": "/ Monat / Person", "tags": ["Gemeinsames Bad", "Schreibtisch", "Kleiderschrank", "Wi-Fi", "Balkon"] },
-    { "type": "Wirtschaftlich", "name": "Dreibettzimmer", "price": "₺2.800", "per": "/ Monat / Person", "tags": ["Gemeinsames Bad", "Schreibtisch", "Kleiderschrank", "Wi-Fi"] }
+    { "name": "Einzelzimmer",   "tags": ["Fernseher", "Gemeinsamer Kühlschrank", "Eigener Schreibtisch", "Kleiderschrank", "Erstklassige Einrichtung", "WC-Bad"] },
+    { "name": "Doppelzimmer",   "tags": ["Fernseher", "Gemeinsamer Kühlschrank", "Eigener Schreibtisch", "Eigener Schrank", "Terrasse", "WC-Bad"] },
+    { "name": "Dreibettzimmer", "tags": ["Fernseher", "Gemeinsamer Kühlschrank", "Eigener Schreibtisch", "Eigener Schrank", "Balkon", "WC-Bad"] }
   ],
   "servicesSection": {
     "label": "Unsere Leistungen",
     "title": "Alles, was Sie brauchen"
   },
   "serviceItems": [
-    { "title": "Verpflegung",       "desc": "3 Mahlzeiten täglich unter diätistischer Aufsicht.",   "icon": "food"    },
-    { "title": "24/7 Sicherheit",   "desc": "CCTV-System und Sicherheitspersonal.",                 "icon": "sec"     },
-    { "title": "Lernsaal",          "desc": "Ruhige und moderne Lernumgebungen.",                   "icon": "study"   },
-    { "title": "Waschsalon",        "desc": "7 Tage geöffnet, kostenlose Waschmaschinen.",          "icon": "laundry" },
-    { "title": "Fitnessstudio",     "desc": "Moderne Fitnessgeräte.",                               "icon": "gym"     },
-    { "title": "Sozialbereiche",    "desc": "TV-Lounge, Sitzbereich und Cafeteria.",                "icon": "soc"     },
-    { "title": "Bibliothek",        "desc": "Große Buchsammlung und Leseecke.",                     "icon": "lib"     },
-    { "title": "Cafeteria",         "desc": "Günstige Snacks und Getränke.",                        "icon": "cafe"    },
-    { "title": "Gesundheitsraum",   "desc": "Erste-Hilfe und Notfallunterstützung.",                "icon": "medr"    },
-    { "title": "Schnelles Internet","desc": "Glasfaser-Infrastruktur, unbegrenztes WLAN.",          "icon": "wifi"    },
-    { "title": "Shuttle",           "desc": "Regelmäßiger kostenloser Shuttle zum Campus.",         "icon": "bus"     },
-    { "title": "Reinigung",         "desc": "Wöchentliche professionelle Zimmerreinigung.",         "icon": "clean"   }
+    { "title": "Unbegrenztes Internet",       "desc": "Genießen Sie unterbrechungsfreies Internet mit unbegrenztem und schnellem WLAN.",                                                       "icon": "wifi"     },
+    { "title": "24/7 Warmwasser",             "desc": "Rund um die Uhr durchgehendes Warmwasser.",                                                                                            "icon": "drop"     },
+    { "title": "Erdgasheizung",               "desc": "Zentrales Erdgasheizsystem, das im Winter 24/7 in Betrieb ist.",                                                                       "icon": "thermo"   },
+    { "title": "Erdbebensicherheit",          "desc": "Ihre Sicherheit ist uns wichtig — unser Gebäude wurde nach Erdbebenvorschriften gebaut.",                                              "icon": "build"    },
+    { "title": "Offenes Frühstücksbuffet",    "desc": "Ein köstliches Frühstück, das Sie an zuhause erinnert. Am Wochenende ist ein spätes Frühstück möglich.",                               "icon": "food"     },
+    { "title": "Sommer-Pensionsservice",      "desc": "In den Sommermonaten bieten wir Familien einen Pensionsservice an.",                                                                   "icon": "sun"      },
+    { "title": "Lernsaal",                    "desc": "Eine ruhige Umgebung, in der Sie sich problemlos auf Ihre Kurse und Prüfungen vorbereiten können.",                                     "icon": "study"    },
+    { "title": "Internetlounge",              "desc": "Ein komfortabler Bereich, in dem Sie das Internet in vollen Zügen genießen können.",                                                    "icon": "monitor"  },
+    { "title": "TV- und Aufenthaltsraum",     "desc": "Ein Entspannungsraum, in dem Sie nach einem langen Tag abschalten und Filme oder Serien schauen können.",                               "icon": "tv"       },
+    { "title": "Voll ausgestattete Küche",    "desc": "Bereiten Sie Ihre eigenen Mahlzeiten in unserer gut ausgestatteten Küche mit allem Kochgeschirr zu.",                                   "icon": "utensils" },
+    { "title": "Kostenloser Wäscheservice",   "desc": "Kostenloser Wäscheservice zum Waschen Ihrer Kleidung.",                                                                                "icon": "laundry"  },
+    { "title": "24/7 Videoüberwachung",       "desc": "Unser Wohnheim wird rund um die Uhr durch Sicherheitskameras überwacht.",                                                              "icon": "camera"   }
   ],
   "facilitiesSection": {
     "label": "Unsere Einrichtungen",
@@ -71,24 +72,22 @@
     "sub": "Wir bieten moderne Einrichtungen zur Unterstützung der akademischen und sozialen Entwicklung unserer Studentinnen."
   },
   "facilityItems": [
-    { "title": "Speisesaal",      "desc": "Geräumiger und moderner Speisesaal, 3 Mahlzeiten täglich unter diätistischer Aufsicht." },
-    { "title": "Küche",           "desc": "Voll ausgestattete Gemeinschaftsküche, in der Studentinnen ihre eigenen Mahlzeiten zubereiten können." },
-    { "title": "Lernsaal",        "desc": "Ruhige und moderne Lernumgebung, ausgestattet mit Hochgeschwindigkeits-WLAN." },
-    { "title": "Aufenthaltsraum", "desc": "Geräumiger Gemeinschaftsraum mit TV, Sofas und Bereichen für soziale Aktivitäten." }
+    { "title": "Speisesaal",      "desc": "Unser geräumiger Speisesaal, in dem Sie Mahlzeiten von unserem Partnercateringunternehmen bestellen und genießen können." },
+    { "title": "Küche",           "desc": "Eine rund um die Uhr verfügbare Küche, in der Sie jederzeit Ihre eigenen Speisen und Snacks zubereiten können." },
+    { "title": "Lernsaal",        "desc": "Ein ruhiger und luftiger Lernraum zur Prüfungsvorbereitung oder für den täglichen Unterricht." },
+    { "title": "Aufenthaltsraum", "desc": "Ein Bereich, in dem Sie nach einem langen Tag entspannen, fernsehen und sich mit Freunden unterhalten können." }
   ],
   "regDocsSection": {
     "label": "Anmeldung",
     "title": "Erforderliche Dokumente für die Anmeldung",
-    "sub": "Bitte bereiten Sie folgende Dokumente vor, um sich in unserem Wohnheim anzumelden.",
+    "sub": "Um unserer Familie beizutreten und in unserem Wohnheim zu wohnen, sind einige Dokumente erforderlich. Wir haben die notwendigen Unterlagen für Sie aufgelistet.",
     "items": [
+      "Bewerbungsantrag",
       "Kopie des Personalausweises",
-      "Wohnsitzbescheinigung (letzte 3 Monate)",
       "Studentenbescheinigung",
-      "4 Passfotos",
-      "Elterliche Einverständniserklärung (unter 18)",
-      "Gesundheitsbericht",
-      "Einkommensnachweis (für Stipendienantrag)",
-      "Strafregisterauszug"
+      "Strafregisterauszug von der Staatsanwaltschaft",
+      "Ärztliches Attest über die Eignung für die Heimunterbringung",
+      "4 Lichtbilder"
     ],
     "note": "Vollständige Unterlagen beschleunigen den Anmeldeprozess. Für detaillierte Informationen können Sie uns anrufen oder das Voranmeldeformular ausfüllen."
   },
@@ -96,10 +95,10 @@
     "label": "Kontakt & Lage",
     "title": "Wie Sie uns erreichen?",
     "contactTitle": "Kontaktinformationen",
-    "address": "Terzioğlu Mah. Cumhuriyet Cad. No:24, Merkez / Çanakkale",
-    "addressShort": "Terzioğlu Mah. Cumhuriyet Cad. No:24, Çanakkale",
-    "phone": "+90 286 217 00 00",
-    "email": "info@sardunya.com.tr",
+    "address": "Cevatpaşa Mah. 1. Çanakçılar Sokak No: 18 Çanakkale/Merkez",
+    "addressShort": "Cevatpaşa Mah. 1. Çanakçılar Sokak No: 18, Çanakkale",
+    "phones": ["0286 212 4030", "0530 038 6648", "0537 222 8852"],
+    "email": "sardunyayurt@gmail.com",
     "hours": "Mo–Fr 08:00–18:00 | Sa 09:00–14:00",
     "nearbyPlaces": {
       "title": "In der Nähe",
@@ -114,13 +113,13 @@
   },
   "aboutSection": {
     "label": "Über Uns",
-    "title": "14 Jahre Vertrauen und Erfahrung",
-    "text": "Das Sardunya Mädchenwohnheim, 2010 in Çanakkale gegründet, hat Tausenden von Studentinnen einen sicheren, komfortablen und friedlichen Wohnraum geboten. Mit unserem erfahrenen Personal und modernen Einrichtungen haben wir es uns zur Priorität gemacht, zum akademischen Erfolg und zur sozialen Entwicklung unserer Studentinnen beizutragen.",
+    "title": "Die vertrauenswürdige Adresse in Çanakkale",
+    "text": "Das Sardunya Mädchenwohnheim nahm 2011 seinen vollen Betrieb auf und hat mit seiner Qualität, seinen hohen Standards und seinem toleranten Management eine moderne Wohnumgebung in Çanakkale geschaffen. Wir glauben, dass die Unterkunft die Bedürfnisse der Studierenden vollständig und schnell erfüllen muss, damit sie ein erfolgreiches Universitätsleben führen können. Mit diesem Bewusstsein stellen wir die Zufriedenheit unserer geschätzten Studierenden stets in den Vordergrund.",
     "points": [
-      "Wir haben seit 2010 mehr als 200 Studentinnen beherbergt.",
-      "Wir besitzen alle Sicherheits- und Hygienezertifikate.",
-      "Unser erfahrenes Personal steht unseren Studentinnen stets zur Seite.",
-      "Wir haben eine Studentenzufriedenheitsrate von 97%."
+      "Seit 2011 bieten wir ununterbrochene Dienstleistungen.",
+      "Ein modernes Wohnheim, das Weltqualitätsstandards anwendet.",
+      "Wir unterstützen Studierende dabei, ihre Zeit effektiv zu nutzen.",
+      "Ein tolerantes und erfahrenes Managementteam an Ihrer Seite."
     ]
   },
   "gallerySection": {
@@ -142,9 +141,15 @@
     "roomLbl": "Bevorzugter Zimmertyp",
     "roomPh": "Auswählen...",
     "roomOptions": ["Einzelzimmer", "Doppelzimmer", "Dreibettzimmer"],
+    "deptLbl": "Studiengang",
+    "deptPh": "Studiengang eingeben",
+    "gradeLbl": "Studienjahr",
+    "gradePh": "Auswählen...",
+    "gradeOptions": ["Vorkurs", "1. Jahr", "2. Jahr", "3. Jahr", "4. Jahr", "5. Jahr", "Master", "Doktorat"],
     "noteLbl": "Ihre Notiz",
     "notePh": "Möchten Sie etwas hinzufügen?",
     "cta": "Voranmeldung absenden",
-    "ctaRoom": "Voranmeldeformular"
+    "ctaRoom": "Voranmeldeformular",
+    "errorRequired": "Dieses Feld ist erforderlich"
   }
 }

@@ -18,7 +18,8 @@
     "subtitle": "Kız Öğrenci Yurdu",
     "sub": "Güvenli, konforlu ve modern yaşam alanlarında geleceğinizi inşa edin. Çanakkale'nin kalbinde, kampüse 3 dakika yürüme mesafesinde.",
     "cta1": "Ön Kayıt Formu",
-    "cta2": "Bize Ulaşın"
+    "cta2": "Bize Ulaşın",
+    "pensionNote": "Yaz dönemlerinde ailelere pansiyon hizmeti verilmektedir."
   },
   "stats": [
     { "val": "200+", "lbl": "Mutlu Öğrenci" },
@@ -79,7 +80,7 @@
   "regDocsSection": {
     "label": "Kayıt İşlemleri",
     "title": "Kayıt İçin Gerekli Belgeler",
-    "sub": "Yurdumuza kayıt yaptırmak için aşağıdaki belgeleri hazırlayınız.",
+    "sub": "Ailemize katılmak yurdumuzda konaklamak için bazı belgeler gereklidir. Sizleri yormamak adına gerekli belgeleri sizler için sıraladık.",
     "items": [
       "Müracaat Dilekçesi",
       "Nüfus Cüzdanı Örneği",
@@ -94,10 +95,10 @@
     "label": "İletişim & Konum",
     "title": "Bize Nasıl Ulaşırsınız?",
     "contactTitle": "İletişim Bilgileri",
-    "address": "Terzioğlu Mah. Cumhuriyet Cad. No:24, Merkez / Çanakkale",
-    "addressShort": "Terzioğlu Mah. Cumhuriyet Cad. No:24, Çanakkale",
-    "phone": "+90 286 217 00 00",
-    "email": "info@sardunya.com.tr",
+    "address": "Cevatpaşa Mah. 1. Çanakçılar Sokak No: 18 Çanakkale/Merkez",
+    "addressShort": "Cevatpaşa Mah. 1. Çanakçılar Sokak No: 18, Çanakkale",
+    "phones": ["0286 212 4030", "0530 038 6648", "0537 222 8852"],
+    "email": "sardunyayurt@gmail.com",
     "hours": "Pzt–Cum 08:00–18:00 | Cmt 09:00–14:00",
     "nearbyPlaces": {
       "title": "Yakın Yerler",
@@ -112,13 +113,13 @@
   },
   "aboutSection": {
     "label": "Hakkımızda",
-    "title": "14 Yıllık Güven ve Deneyim",
-    "text": "2010 yılında Çanakkale'de kurulan Sardunya Kız Öğrenci Yurdu, bugüne kadar binlerce öğrenciye güvenli, konforlu ve huzurlu bir yaşam alanı sunmuştur. Deneyimli kadromuz ve modern tesislerimizle öğrencilerimizin akademik başarısına ve sosyal gelişimine katkı sağlamayı önceliğimiz olarak benimsedik.",
+    "title": "Çanakkale'nin Güvenilir Adresi",
+    "text": "2011 yılında tam kapasite ile faaliyete geçen Sardunya Kız Öğrenci Yurdu; kalitesi, yüksek standartları ve öğrencilere hoşgörülü yaklaşan yönetimi ile Çanakkale'de çağdaş bir yaşam alanı kazandırmıştır. Öğrencilerin başarılı bir üniversite hayatı geçirebilmesi için konaklama ortamının ihtiyaçlara tam ve hızlı biçimde cevap verebilmesi gerektiğine inanıyoruz. Bu bilinçle sunduğumuz hizmetlerle siz değerli öğrencilerimizin memnuniyetini her zaman ön planda tutuyoruz.",
     "points": [
-      "2010'dan bu yana 200'den fazla öğrenciye ev sahipliği yaptık.",
-      "Tüm güvenlik ve hijyen sertifikalarına sahibiz.",
-      "Deneyimli kadromuz öğrencilerimizin yanındadır.",
-      "Öğrenci memnuniyetinde yüzde 97 oranına sahibiz."
+      "2011'den bu yana kesintisiz hizmet veriyoruz.",
+      "Dünya kalite standartlarını uygulayan modern bir yurduz.",
+      "Öğrencilerin zamanını verimli kullanmasına destek oluyoruz.",
+      "Hoşgörülü ve deneyimli yönetim kadrosuyla yanınızdayız."
     ]
   },
   "gallerySection": {
@@ -140,9 +141,15 @@
     "roomLbl": "Tercih Ettiğiniz Oda Tipi",
     "roomPh": "Seçiniz...",
     "roomOptions": ["Tek Kişilik Oda", "Çift Kişilik Oda", "Üç Kişilik Oda"],
+    "deptLbl": "Okuduğunuz Bölüm",
+    "deptPh": "Bölüm adını giriniz",
+    "gradeLbl": "Sınıf",
+    "gradePh": "Seçiniz...",
+    "gradeOptions": ["Hazırlık", "1. Sınıf", "2. Sınıf", "3. Sınıf", "4. Sınıf", "5. Sınıf", "Yüksek Lisans", "Doktora"],
     "noteLbl": "Notunuz",
     "notePh": "Eklemek istediğiniz bir şey var mı?",
     "cta": "Ön Kayıt Yaptır",
-    "ctaRoom": "Ön Kayıt Formu"
+    "ctaRoom": "Ön Kayıt Formu",
+    "errorRequired": "Bu alan zorunludur"
   }
 }

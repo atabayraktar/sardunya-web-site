@@ -18,7 +18,8 @@
     "subtitle": "Girls' Dormitory",
     "sub": "Build your future in safe, comfortable and modern living spaces. In the heart of Çanakkale, just 3 minutes walk from campus.",
     "cta1": "Pre-Registration",
-    "cta2": "Contact Us"
+    "cta2": "Contact Us",
+    "pensionNote": "Pension accommodation is available for families during summer."
   },
   "stats": [
     { "val": "200+", "lbl": "Happy Students" },
@@ -43,27 +44,27 @@
     "title": "Comfortable Living Spaces"
   },
   "roomItems": [
-    { "type": "Economy", "name": "Single Room",  "price": "₺4.500", "per": "/ month",        "tags": ["Private Bathroom", "Study Desk", "Wardrobe", "Wi-Fi", "AC"] },
-    { "type": "Comfort", "name": "Double Room",  "price": "₺3.200", "per": "/ month / person","tags": ["Shared Bathroom", "Study Desk", "Wardrobe", "Wi-Fi", "Balcony"] },
-    { "type": "Economy", "name": "Triple Room",  "price": "₺2.800", "per": "/ month / person","tags": ["Shared Bathroom", "Study Desk", "Wardrobe", "Wi-Fi"] }
+    { "name": "Single Room",  "tags": ["Television", "Shared Refrigerator", "Personal Study Desk", "Wardrobe", "Premium Furnishings", "WC-Bathroom"] },
+    { "name": "Double Room",  "tags": ["Television", "Shared Refrigerator", "Personal Desk", "Personal Wardrobe", "Terrace", "WC-Bathroom"] },
+    { "name": "Triple Room",  "tags": ["Television", "Shared Refrigerator", "Personal Desk", "Personal Wardrobe", "Balcony", "WC-Bathroom"] }
   ],
   "servicesSection": {
     "label": "Our Services",
     "title": "Everything You Need"
   },
   "serviceItems": [
-    { "title": "Meal Service",       "desc": "3 meals a day under dietitian supervision.",   "icon": "food"    },
-    { "title": "24/7 Security",      "desc": "CCTV system and security personnel.",           "icon": "sec"     },
-    { "title": "Study Hall",         "desc": "Quiet and modern study environments.",          "icon": "study"   },
-    { "title": "Laundry",            "desc": "Open 7 days, free washing machines.",           "icon": "laundry" },
-    { "title": "Gym",                "desc": "Modern fitness equipment.",                     "icon": "gym"     },
-    { "title": "Social Areas",       "desc": "TV lounge, seating and cafeteria.",             "icon": "soc"     },
-    { "title": "Library",            "desc": "Large book collection and reading corner.",     "icon": "lib"     },
-    { "title": "Cafeteria",          "desc": "Affordable snacks and beverages.",              "icon": "cafe"    },
-    { "title": "Health Room",        "desc": "First aid and emergency response support.",     "icon": "medr"    },
-    { "title": "High-Speed Internet","desc": "Fiber infrastructure, unlimited Wi-Fi.",        "icon": "wifi"    },
-    { "title": "Shuttle",            "desc": "Regular free shuttle to campus.",               "icon": "bus"     },
-    { "title": "Cleaning",           "desc": "Weekly professional room cleaning.",            "icon": "clean"   }
+    { "title": "Unlimited Internet",          "desc": "Enjoy uninterrupted internet access with unlimited and high-speed Wi-Fi.",                                                               "icon": "wifi"     },
+    { "title": "24/7 Hot Water",              "desc": "Continuous hot water available around the clock.",                                                                                      "icon": "drop"     },
+    { "title": "Natural Gas Heating",         "desc": "Central natural gas heating system operating 24/7 during winter.",                                                                      "icon": "thermo"   },
+    { "title": "Earthquake Safety",           "desc": "Your safety matters — our building is designed in compliance with earthquake regulations.",                                             "icon": "build"    },
+    { "title": "Open Buffet Breakfast",       "desc": "A delicious breakfast you won't miss from home. Weekend late breakfast option available.",                                              "icon": "food"     },
+    { "title": "Summer Pension Service",      "desc": "Pension accommodation service is available for families during summer periods.",                                                        "icon": "sun"      },
+    { "title": "Study Hall",                  "desc": "A quiet environment where you can easily prepare for your lessons and exams.",                                                          "icon": "study"    },
+    { "title": "Internet Lounge",             "desc": "A comfortable space where you can make the most of your internet time.",                                                                "icon": "monitor"  },
+    { "title": "TV & Recreation Room",        "desc": "A relaxing lounge where you can unwind after a long day and watch movies or series.",                                                   "icon": "tv"       },
+    { "title": "Fully Equipped Kitchen",      "desc": "Prepare your own meals in our fully stocked kitchen with all kinds of cookware.",                                                       "icon": "utensils" },
+    { "title": "Free Laundry Service",        "desc": "Free laundry service available for washing your clothes.",                                                                              "icon": "laundry"  },
+    { "title": "24/7 CCTV Security",          "desc": "Our dormitory is monitored by 24/7 security cameras to ensure your safety.",                                                           "icon": "camera"   }
   ],
   "facilitiesSection": {
     "label": "Our Facilities",
@@ -71,24 +72,22 @@
     "sub": "We offer modern facilities to support the academic and social development of our students."
   },
   "facilityItems": [
-    { "title": "Dining Hall", "desc": "Spacious and modern dining room, serving 3 meals a day under dietitian supervision." },
-    { "title": "Kitchen",     "desc": "Fully equipped shared kitchen where students can prepare their own meals." },
-    { "title": "Study Hall",  "desc": "Quiet and modern study environment, equipped with high-speed Wi-Fi." },
-    { "title": "Lounge",      "desc": "Spacious common room with TV, sofas and social activity areas." }
+    { "title": "Dining Hall",       "desc": "Our spacious dining hall where you can enjoy meals ordered from our partner catering company." },
+    { "title": "Kitchen",           "desc": "A 24/7 kitchen where you can prepare your own food and snacks whenever you like." },
+    { "title": "Study Hall",        "desc": "A quiet and airy study room for preparing for exams or daily lessons." },
+    { "title": "Recreation Room",   "desc": "A space where you can relax after a long day, watch TV and chat with friends." }
   ],
   "regDocsSection": {
     "label": "Registration",
     "title": "Required Documents for Registration",
-    "sub": "Please prepare the following documents to register at our dormitory.",
+    "sub": "Some documents are required to join our family and stay in our dormitory. We have listed the necessary documents for you.",
     "items": [
-      "Copy of ID card",
-      "Residence certificate (last 3 months)",
-      "Student certificate",
-      "4 passport photos",
-      "Parental consent form (under 18)",
-      "Health report",
-      "Income certificate (for scholarship application)",
-      "Criminal record"
+      "Application Petition",
+      "Copy of ID Card",
+      "Student Certificate",
+      "Criminal Record from the Public Prosecutor's Office",
+      "Health report confirming suitability for dormitory accommodation",
+      "4 Photographs"
     ],
     "note": "Bringing complete documents will speed up the registration process. You can call us or fill out the pre-registration form for detailed information."
   },
@@ -96,10 +95,10 @@
     "label": "Contact & Location",
     "title": "How to Reach Us?",
     "contactTitle": "Contact Information",
-    "address": "Terzioğlu Mah. Cumhuriyet Cad. No:24, Merkez / Çanakkale",
-    "addressShort": "Terzioğlu Mah. Cumhuriyet Cad. No:24, Çanakkale",
-    "phone": "+90 286 217 00 00",
-    "email": "info@sardunya.com.tr",
+    "address": "Cevatpaşa Mah. 1. Çanakçılar Sokak No: 18 Çanakkale/Merkez",
+    "addressShort": "Cevatpaşa Mah. 1. Çanakçılar Sokak No: 18, Çanakkale",
+    "phones": ["0286 212 4030", "0530 038 6648", "0537 222 8852"],
+    "email": "sardunyayurt@gmail.com",
     "hours": "Mon–Fri 08:00–18:00 | Sat 09:00–14:00",
     "nearbyPlaces": {
       "title": "Nearby Places",
@@ -114,13 +113,13 @@
   },
   "aboutSection": {
     "label": "About Us",
-    "title": "14 Years of Trust and Experience",
-    "text": "Sardunya Girls' Dormitory, founded in Çanakkale in 2010, has provided thousands of students with a safe, comfortable and peaceful living space. With our experienced staff and modern facilities, we have adopted it as our priority to contribute to the academic success and social development of our students.",
+    "title": "The Trusted Address of Çanakkale",
+    "text": "Sardunya Girls' Dormitory opened at full capacity in 2011 and has since established a modern living space in Çanakkale with its quality, high standards and tolerant management approach. We believe that accommodation must fully and promptly meet the needs of students for them to have a successful university life. With this awareness, we always put the satisfaction of our valued students first.",
     "points": [
-      "We have hosted more than 200 students since 2010.",
-      "We hold all security and hygiene certificates.",
-      "Our experienced staff is always by our students' side.",
-      "We have a 97% student satisfaction rate."
+      "Serving without interruption since 2011.",
+      "A modern dormitory applying world quality standards.",
+      "We support students in making the most of their time.",
+      "A tolerant and experienced management team by your side."
     ]
   },
   "gallerySection": {
@@ -142,9 +141,15 @@
     "roomLbl": "Preferred Room Type",
     "roomPh": "Select...",
     "roomOptions": ["Single Room", "Double Room", "Triple Room"],
+    "deptLbl": "Department",
+    "deptPh": "Enter your department",
+    "gradeLbl": "Year",
+    "gradePh": "Select...",
+    "gradeOptions": ["Prep Class", "1st Year", "2nd Year", "3rd Year", "4th Year", "5th Year", "Master's", "PhD"],
     "noteLbl": "Your Note",
     "notePh": "Anything you'd like to add?",
     "cta": "Submit Pre-Registration",
-    "ctaRoom": "Pre-Registration Form"
+    "ctaRoom": "Pre-Registration Form",
+    "errorRequired": "This field is required"
   }
 }
