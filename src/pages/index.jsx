@@ -505,7 +505,7 @@ export default function Home({ locales }) {
       {/* ── FLOATING ACTION BUTTONS ── */}
       <div className="fab-stack">
         <a
-          href="https://wa.me/905459580808"
+          href="https://wa.me/905300386648"
           target="_blank"
           rel="noopener noreferrer"
           className="fab fab--wa"
