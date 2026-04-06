@@ -72,10 +72,10 @@
     "sub": "Öğrencilerimizin akademik ve sosyal gelişimini desteklemek için modern tesisler sunuyoruz."
   },
   "facilityItems": [
-    { "title": "Yemekhane",       "desc": "Anlaşmalı olduğumuz catering firmasından ücretli olarak sipariş edebileceğiniz yemekleri afiyetle yiyebileceğiniz geniş yemekhanemiz." },
-    { "title": "Mutfak",          "desc": "İstediğinizde kendi yemeğinizi atıştırmalıklarınızı hazırlayabileceğiniz 7/24 mutfak imkanı." },
     { "title": "Etüt Salonu",     "desc": "Sınav haftalarınızda veya günlük derslerinize hazırlanırken kullanabileceğiniz sessiz ferah bir çalışma ortamı bulunan etüt salonumuz." },
-    { "title": "Dinlenme Salonu", "desc": "Günün yorgunluğunu atabileceğiniz, tv izleyip arkadaşlarınızla sohbet edebileceğiniz bir ortam." }
+    { "title": "Dinlenme Salonu", "desc": "Günün yorgunluğunu atabileceğiniz, tv izleyip arkadaşlarınızla sohbet edebileceğiniz bir ortam." },
+    { "title": "Yemekhane",       "desc": "Anlaşmalı olduğumuz catering firmasından ücretli olarak sipariş edebileceğiniz yemekleri afiyetle yiyebileceğiniz geniş yemekhanemiz." },
+    { "title": "Mutfak",          "desc": "İstediğinizde kendi yemeğinizi atıştırmalıklarınızı hazırlayabileceğiniz 7/24 mutfak imkanı." }
   ],
   "regDocsSection": {
     "label": "Kayıt İşlemleri",
