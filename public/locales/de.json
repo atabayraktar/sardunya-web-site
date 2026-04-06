@@ -103,11 +103,12 @@
     "nearbyPlaces": {
       "title": "In der Nähe",
       "items": [
-        { "name": "ÇOMÜ Terzioğlu Campus", "distance": "500 m", "type": "university" },
-        { "name": "Atatürk Park", "distance": "800 m", "type": "park" },
-        { "name": "Staatskrankenhaus", "distance": "1.2 km", "type": "hospital" },
-        { "name": "Stadtzentrum / Basar", "distance": "1.5 km", "type": "shopping" },
-        { "name": "Busbahnhof", "distance": "2.5 km", "type": "bus" }
+        { "name": "ÇOMÜ Pädagogische Fakultät", "distance": "500 m",  "type": "university" },
+        { "name": "ÇOMÜ Terzioğlu Campus",      "distance": "4.5 km", "type": "university" },
+        { "name": "Fährhafen / Uhrturm",        "distance": "1 km",   "type": "landmark"   },
+        { "name": "Nächste Bushaltestelle",      "distance": "50 m",   "type": "bus"        },
+        { "name": "Staatskrankenhaus",           "distance": "500 m",  "type": "hospital"   },
+        { "name": "Einkaufszentrum",             "distance": "3 km",   "type": "shopping"   }
       ]
     }
   },

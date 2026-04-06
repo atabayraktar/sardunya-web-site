@@ -263,20 +263,15 @@ export default function Home({ locales }) {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [animKey, setAnimKey] = useState(0);
   const statsRef = useRef(null);
+  const scrollLockY = useRef(0);
   const [closingPopup, setClosingPopup] = useState(false);
   const [closingRoom,  setClosingRoom]  = useState(false);
 
   const openPopup = () => { setFormErrors({}); setPopupOpen(true); };
 
-  const closePopup = () => {
-    setClosingPopup(true);
-    setTimeout(() => { setPopupOpen(false); setClosingPopup(false); }, 220);
-  };
+  const closePopup = () => { setPopupOpen(false); };
 
-  const closeRoom = () => {
-    setClosingRoom(true);
-    setTimeout(() => { setRoomPopup(null); setClosingRoom(false); }, 220);
-  };
+  const closeRoom = () => { setRoomPopup(null); };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -296,29 +291,8 @@ export default function Home({ locales }) {
   // Lock body scroll when any popup is open
   useEffect(() => {
     const isOpen = popupOpen || !!roomPopup;
-    if (isOpen) {
-      const scrollY = window.scrollY;
-      document.body.style.overflow   = "hidden";
-      document.body.style.position   = "fixed";
-      document.body.style.top        = `-${scrollY}px`;
-      document.body.style.width      = "100%";
-      document.documentElement.style.overflow = "hidden";
-    } else {
-      const top = parseInt(document.body.style.top || "0", 10);
-      document.body.style.overflow   = "";
-      document.body.style.position   = "";
-      document.body.style.top        = "";
-      document.body.style.width      = "";
-      document.documentElement.style.overflow = "";
-      window.scrollTo(0, -top);
-    }
-    return () => {
-      document.body.style.overflow   = "";
-      document.body.style.position   = "";
-      document.body.style.top        = "";
-      document.body.style.width      = "";
-      document.documentElement.style.overflow = "";
-    };
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
   }, [popupOpen, roomPopup]);
 
   useEffect(() => {
@@ -470,23 +444,6 @@ export default function Home({ locales }) {
             {t.nav.map((n) => (
               <a key={n.href} href={n.href} onClick={closeMenu}>{n.label}</a>
             ))}
-            <div className="drawer__lang-row">
-              {[
-                { code: "tr", label: "Türkçe",  flag: "🇹🇷" },
-                { code: "en", label: "English", flag: "🇬🇧" },
-                { code: "de", label: "Deutsch", flag: "🇩🇪" },
-                { code: "ru", label: "Русский", flag: "🇷🇺" },
-                { code: "es", label: "Español", flag: "🇪🇸" },
-              ].map(({ code, label, flag }) => (
-                <button
-                  key={code}
-                  className={`drawer__lang-btn${lang === code ? " active" : ""}`}
-                  onClick={() => { setLang(code); setLangOpen(false); }}
-                >
-                  <span className={/^[A-Z]+$/.test(flag) ? "lang-switcher__flag--text" : ""}>{flag}</span><span>{label}</span>
-                </button>
-              ))}
-            </div>
             <button className="btn btn--primary" onClick={() => { closeMenu(); openPopup(); }}>
               {t.popup.ctaRoom}
             </button>
@@ -915,14 +872,8 @@ export default function Home({ locales }) {
                     <input id="p-dept" type="text" placeholder={t.popup.deptPh} className={formErrors["p-dept"] ? "input--error" : ""} onChange={() => setFormErrors((p) => ({ ...p, "p-dept": false }))} />
                   </div>
                   <div className="fg">
-                    <label>{t.popup.gradeLbl} <span aria-hidden>*</span></label>
-                    <CustomSelect
-                      id="p-grade"
-                      placeholder={t.popup.gradePh}
-                      options={t.popup.gradeOptions}
-                      hasError={!!formErrors["p-grade"]}
-                      onClearError={() => setFormErrors((p) => ({ ...p, "p-grade": false }))}
-                    />
+                    <label htmlFor="p-grade">{t.popup.gradeLbl} <span aria-hidden>*</span></label>
+                    <input id="p-grade" type="text" placeholder={t.popup.gradePh} className={formErrors["p-grade"] ? "input--error" : ""} onChange={() => setFormErrors((p) => ({ ...p, "p-grade": false }))} />
                   </div>
                   <div className="fg contact__form-full">
                     <label>{t.popup.roomLbl} <span aria-hidden>*</span></label>

@@ -103,11 +103,12 @@
     "nearbyPlaces": {
       "title": "Nearby Places",
       "items": [
-        { "name": "ÇOMÜ Terzioğlu Campus", "distance": "500 m", "type": "university" },
-        { "name": "Atatürk Park", "distance": "800 m", "type": "park" },
-        { "name": "State Hospital", "distance": "1.2 km", "type": "hospital" },
-        { "name": "City Centre / Bazaar", "distance": "1.5 km", "type": "shopping" },
-        { "name": "Bus Terminal", "distance": "2.5 km", "type": "bus" }
+        { "name": "ÇOMÜ Faculty of Education", "distance": "500 m",  "type": "university" },
+        { "name": "ÇOMÜ Terzioğlu Campus",     "distance": "4.5 km", "type": "university" },
+        { "name": "Ferry Port / Clock Tower",  "distance": "1 km",   "type": "landmark"   },
+        { "name": "Nearest Bus Stop",          "distance": "50 m",   "type": "bus"        },
+        { "name": "State Hospital",            "distance": "500 m",  "type": "hospital"   },
+        { "name": "Shopping Mall",             "distance": "3 km",   "type": "shopping"   }
       ]
     }
   },
