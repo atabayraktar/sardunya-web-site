@@ -22,10 +22,10 @@
     "pensionNote": "In den Sommermonaten steht Familien eine Pensionsunterkunft zur Verfügung."
   },
   "stats": [
-    { "val": "200+", "lbl": "Zufriedene Studierende" },
-    { "val": "14",   "lbl": "Jahre Erfahrung" },
+    { "val": "850+", "lbl": "Zufriedene Studierende" },
+    { "val": "15",   "lbl": "Jahre Erfahrung" },
     { "val": "7/24", "lbl": "Sicherheit" },
-    { "val": "3 Min","lbl": "Entfernung zum Campus" }
+    { "val": "2 Min","lbl": "Entfernung zum Campus" }
   ],
   "certsSection": {
     "label": "Dokumente & Zertifikate",

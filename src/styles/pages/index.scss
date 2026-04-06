@@ -1058,20 +1058,21 @@ button { font-family: inherit; }
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-    @media (min-width: 480px) { grid-template-columns: repeat(3, 1fr); }
-    @media (min-width: 768px) { grid-template-columns: repeat(5, 1fr); }
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    @media (min-width: 768px) { grid-template-columns: repeat(6, 1fr); }
   }
 
   &__card {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     background: var(--white);
     border-radius: var(--r-md);
-    padding: 0.625rem 0.625rem;
-    @media (min-width: 480px) { padding: 0.75rem 0.875rem; gap: 0.625rem; }
+    padding: 0.6rem 0.4rem 0.5rem;
+    text-align: center;
     box-shadow: 0 1px 4px rgba(26,26,46,0.07);
     border: 1.5px solid rgba(26,26,46,0.06);
     transition: transform 0.18s ease, box-shadow 0.18s ease;
@@ -1087,41 +1088,46 @@ button { font-family: inherit; }
     &--hospital   .nearby-places__icon { color: #d4607a; background: rgba(212,96,122,0.1); }
     &--shopping   .nearby-places__icon { color: #c07a20; background: rgba(192,122,32,0.1); }
     &--bus        .nearby-places__icon { color: #2980b9; background: rgba(41,128,185,0.1); }
+    &--landmark   .nearby-places__icon { color: #5a8a6a; background: rgba(90,138,106,0.1); }
   }
 
   &__icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2rem;
-    height: 2rem;
+    width: 1.75rem;
+    height: 1.75rem;
     border-radius: 8px;
     flex-shrink: 0;
-    svg { width: 15px; height: 15px; }
+    svg { width: 14px; height: 14px; }
   }
 
   &__info {
     display: flex;
     flex-direction: column;
+    align-items: center;
     min-width: 0;
+    width: 100%;
   }
 
   &__name {
-    font-size: 0.8125rem;
+    font-size: 0.6875rem;
     font-weight: 600;
     color: var(--dark);
-    line-height: 1.3;
+    line-height: 1.25;
     overflow: hidden;
     text-overflow: ellipsis;
-    @media (min-width: 480px) {
-      white-space: nowrap;
-    }
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 
   &__distance {
-    font-size: 0.75rem;
-    color: rgba(26,26,46,0.5);
-    margin-top: 0.125rem;
+    font-size: 0.625rem;
+    font-weight: 700;
+    color: rgba(26,26,46,0.45);
+    margin-top: 0.15rem;
+    letter-spacing: 0.02em;
   }
 }
 
@@ -1824,5 +1830,45 @@ button { font-family: inherit; }
       opacity: 1;
       margin-left: 0.45rem;
     }
+  }
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  left: 1.25rem;
+  z-index: 900;
+  width: 2.625rem;
+  height: 2.625rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--pink);
+  color: var(--white);
+  box-shadow: 0 4px 16px rgba(212, 96, 122, 0.35);
+  opacity: 0;
+  transform: translateY(12px) scale(0.85);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  svg { width: 18px; height: 18px; }
+
+  &--visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+
+  &:hover {
+    background: #b8445e;
+    box-shadow: 0 6px 20px rgba(184, 68, 94, 0.4);
+    transform: translateY(-2px) scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
   }
 }

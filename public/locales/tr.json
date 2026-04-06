@@ -22,10 +22,10 @@
     "pensionNote": "Yaz dönemlerinde ailelere pansiyon hizmeti verilmektedir."
   },
   "stats": [
-    { "val": "200+", "lbl": "Mutlu Öğrenci" },
-    { "val": "14",   "lbl": "Yıl Deneyim" },
+    { "val": "850+", "lbl": "Mutlu Öğrenci" },
+    { "val": "15",   "lbl": "Yıl Deneyim" },
     { "val": "7/24", "lbl": "Güvenlik" },
-    { "val": "3 dk", "lbl": "Kampüse Mesafe" }
+    { "val": "2 dk", "lbl": "Kampüse Mesafe" }
   ],
   "certsSection": {
     "label": "Belgeler & Sertifikalar",
@@ -103,11 +103,12 @@
     "nearbyPlaces": {
       "title": "Yakın Yerler",
       "items": [
-        { "name": "ÇOMÜ Terzioğlu Kampüsü", "distance": "500 m", "type": "university" },
-        { "name": "Atatürk Parkı", "distance": "800 m", "type": "park" },
-        { "name": "Devlet Hastanesi", "distance": "1.2 km", "type": "hospital" },
-        { "name": "Merkez / Çarşı", "distance": "1.5 km", "type": "shopping" },
-        { "name": "Otobüs Terminali", "distance": "2.5 km", "type": "bus" }
+        { "name": "ÇOMÜ Eğitim Fakültesi",    "distance": "500 m",  "type": "university" },
+        { "name": "ÇOMÜ Terzioğlu Fakültesi", "distance": "4.5 km", "type": "university" },
+        { "name": "İskele / Saat Kulesi",      "distance": "1 km",   "type": "landmark"   },
+        { "name": "En Yakın Otobüs Durağı",   "distance": "50 m",   "type": "bus"        },
+        { "name": "Devlet Hastanesi",          "distance": "500 m",  "type": "hospital"   },
+        { "name": "AVM",                       "distance": "3 km",   "type": "shopping"   }
       ]
     }
   },
