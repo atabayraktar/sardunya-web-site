@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper";
+import emailjs from "@emailjs/browser";
 
 // ─── Custom Select ───────────────────────────────────────────────────────────
 function CustomSelect({ id, placeholder, options, hasError, onClearError }) {
@@ -283,6 +284,23 @@ export default function Home({ locales }) {
     });
     if (Object.keys(errors).length) { setFormErrors(errors); return; }
     setFormErrors({});
+
+    emailjs.send(
+      "service_k8mx3ke",
+      "template_js48s6r",
+      {
+        ad_soyad:  f["p-name"].value.trim(),
+        telefon:   f["p-phone"].value.trim(),
+        eposta:    f["p-email"].value.trim(),
+        oda_tipi:  f["p-room"].value.trim(),
+        bolum:     f["p-dept"].value.trim(),
+        sinif:     f["p-grade"].value.trim(),
+        not:       f["p-note"]?.value?.trim() || "-",
+      },
+      "VoVIrL3LCTY2nYKnS"
+    ).then(() => console.log("EmailJS: mail gönderildi"))
+     .catch((err) => console.error("EmailJS hata:", err));
+
     setPopupOpen(false);
   };
 
