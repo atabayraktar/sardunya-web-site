@@ -7,6 +7,7 @@ import { Navigation, Pagination, Autoplay } from "swiper";
 function CustomSelect({ id, placeholder, options, hasError, onClearError }) {
   const [open, setOpen]     = useState(false);
   const [selected, setSel]  = useState("");
+  const [dropUp, setDropUp] = useState(false);
   const ref = useRef(null);
 
   useEffect(() => {
@@ -15,12 +16,21 @@ function CustomSelect({ id, placeholder, options, hasError, onClearError }) {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
+  const handleOpen = () => {
+    if (!open && ref.current) {
+      const rect = ref.current.getBoundingClientRect();
+      const spaceBelow = window.innerHeight - rect.bottom;
+      setDropUp(spaceBelow < 220);
+    }
+    setOpen((o) => !o);
+  };
+
   const pick = (val) => { setSel(val); setOpen(false); onClearError(); };
 
   return (
-    <div className={`cselect${open ? " cselect--open" : ""}${hasError ? " cselect--error" : ""}`} ref={ref}>
+    <div className={`cselect${open ? " cselect--open" : ""}${hasError ? " cselect--error" : ""}${dropUp ? " cselect--dropup" : ""}`} ref={ref}>
       <input type="hidden" id={id} name={id} value={selected} readOnly />
-      <button type="button" className="cselect__trigger" onClick={() => setOpen((o) => !o)} aria-haspopup="listbox" aria-expanded={open}>
+      <button type="button" className="cselect__trigger" onClick={handleOpen} aria-haspopup="listbox" aria-expanded={open}>
         <span className={selected ? "cselect__value" : "cselect__placeholder"}>{selected || placeholder}</span>
         <svg className="cselect__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
@@ -43,39 +53,85 @@ function CustomSelect({ id, placeholder, options, hasError, onClearError }) {
 // ─── Static image data (not translated) ──────────────────────────────────────
 const ROOM_IMGS = [
   [
-    "/images/1-kisilik-1.jpg",
-    "/images/1-kisilik-2.jpg",
+    "/images/1-kisilik-1.jpeg",
+    "/images/1-kisilik-2.jpeg",
+    "/images/1-kisilik-3.jpeg",
+    "/images/1-kisilik-4.jpeg",
+    "/images/1-kisilik-5.jpeg",
   ],
+  {
+    normal: [
+      "/images/2-kisilik-normal-1.jpeg",
+      "/images/2-kisilik-normal-2.jpeg",
+      "/images/2-kisilik-normal-3.jpeg",
+      "/images/2-kisilik-normal-4.jpeg",
+    ],
+    deluxe: [
+      "/images/2-kisilik-deluxe-1.jpeg",
+      "/images/2-kisilik-deluxe-2.jpeg",
+      "/images/2-kisilik-deluxe-3.jpeg",
+      "/images/2-kisilik-deluxe-4.jpeg",
+      "/images/2-kisilik-deluxe-5.jpeg",
+    ],
+  },
   [
-    "/images/2-kisilik-1.jpg",
-    "/images/2-kisilik-2.jpg",
-  ],
-  [
-    "/images/3-kisilik-1.jpg",
-    "/images/3-kisilik-2.jpg",
-    "/images/3-kisilik-3.jpg",
+    "/images/3-kisilik-1.jpeg",
+    "/images/3-kisilik-2.jpeg",
+    "/images/3-kisilik-3.jpeg",
+    "/images/3-kisilik-4.jpeg",
+    "/images/3-kisilik-5.jpeg",
+    "/images/3-kisilik-6.jpeg",
   ],
 ];
 
 const FAC_IMGS = [
   "/images/etut.jpg",
-  "/images/dinlenme.jpg",
+  "/images/dinlenme.jpeg",
   "/images/yemekhane.jpg",
   "/images/mutfak.png",
 ];
 
 const GALLERY_IMGS = [
-  { src: "/images/dis-foto.jpg",    alt: "Sardunya Kız Öğrenci Yurdu" },
-  { src: "/images/manzara.jpg",     alt: "Manzara" },
-  { src: "/images/1-kisilik-1.jpg", alt: "Tek Kişilik Oda" },
-  { src: "/images/2-kisilik-1.jpg", alt: "Çift Kişilik Oda" },
-  { src: "/images/3-kisilik-1.jpg", alt: "Üç Kişilik Oda" },
-  { src: "/images/3-kisilik-2.jpg", alt: "Üç Kişilik Oda 2" },
-  { src: "/images/1-kisilik-2.jpg", alt: "Tek Kişilik Oda 2" },
-  { src: "/images/yemekhane.jpg",   alt: "Yemekhane" },
-  { src: "/images/mutfak.png",      alt: "Mutfak" },
-  { src: "/images/etut.jpg",        alt: "Etüt Salonu" },
-  { src: "/images/dinlenme.jpg",    alt: "Dinlenme Alanı" },
+  // Dış & genel
+  { src: "/images/dis-foto.jpeg",           alt: "Sardunya Kız Öğrenci Yurdu" },
+  { src: "/images/manzara.jpg",             alt: "Manzara" },
+  // Ek galeri fotoğrafları
+  { src: "/images/galeri-1.jpeg",           alt: "Sardunya Kız Öğrenci Yurdu" },
+  { src: "/images/galeri-2.jpeg",           alt: "Sardunya Kız Öğrenci Yurdu" },
+  { src: "/images/galeri-3.jpeg",           alt: "Sardunya Kız Öğrenci Yurdu" },
+  { src: "/images/galeri-4.jpeg",           alt: "Sardunya Kız Öğrenci Yurdu" },
+  { src: "/images/galeri-5.jpeg",           alt: "Sardunya Kız Öğrenci Yurdu" },
+  { src: "/images/galeri-6.jpeg",           alt: "Sardunya Kız Öğrenci Yurdu" },
+  { src: "/images/galeri-7.jpeg",           alt: "Sardunya Kız Öğrenci Yurdu" },
+  // Tek kişilik oda
+  { src: "/images/1-kisilik-1.jpeg",        alt: "Tek Kişilik Oda" },
+  { src: "/images/1-kisilik-2.jpeg",        alt: "Tek Kişilik Oda" },
+  { src: "/images/1-kisilik-3.jpeg",        alt: "Tek Kişilik Oda" },
+  { src: "/images/1-kisilik-4.jpeg",        alt: "Tek Kişilik Oda" },
+  { src: "/images/1-kisilik-5.jpeg",        alt: "Tek Kişilik Oda" },
+  // Çift kişilik normal
+  { src: "/images/2-kisilik-normal-1.jpeg", alt: "Çift Kişilik Oda" },
+  { src: "/images/2-kisilik-normal-2.jpeg", alt: "Çift Kişilik Oda" },
+  { src: "/images/2-kisilik-normal-3.jpeg", alt: "Çift Kişilik Oda" },
+  { src: "/images/2-kisilik-normal-4.jpeg", alt: "Çift Kişilik Oda" },
+  // Çift kişilik deluxe
+  { src: "/images/2-kisilik-deluxe-1.jpeg", alt: "Çift Kişilik Oda Deluxe" },
+  { src: "/images/2-kisilik-deluxe-2.jpeg", alt: "Çift Kişilik Oda Deluxe" },
+  { src: "/images/2-kisilik-deluxe-3.jpeg", alt: "Çift Kişilik Oda Deluxe" },
+  { src: "/images/2-kisilik-deluxe-4.jpeg", alt: "Çift Kişilik Oda Deluxe" },
+  { src: "/images/2-kisilik-deluxe-5.jpeg", alt: "Çift Kişilik Oda Deluxe" },
+  // Üç kişilik oda
+  { src: "/images/3-kisilik-1.jpeg",        alt: "Üç Kişilik Oda" },
+  { src: "/images/3-kisilik-2.jpeg",        alt: "Üç Kişilik Oda" },
+  { src: "/images/3-kisilik-3.jpeg",        alt: "Üç Kişilik Oda" },
+  { src: "/images/3-kisilik-4.jpeg",        alt: "Üç Kişilik Oda" },
+  { src: "/images/3-kisilik-5.jpeg",        alt: "Üç Kişilik Oda" },
+  { src: "/images/3-kisilik-6.jpeg",        alt: "Üç Kişilik Oda" },
+  // Tesisler
+  { src: "/images/etut.jpg",                alt: "Etüt Salonu" },
+  { src: "/images/dinlenme.jpeg",           alt: "Dinlenme Alanı" },
+  { src: "/images/yemekhane.jpg",           alt: "Yemekhane" },
+  { src: "/images/mutfak.png",              alt: "Mutfak" },
 ];
 
 // ─── SVG Icons ────────────────────────────────────────────────────────────────
@@ -192,6 +248,15 @@ export default function Home({ locales }) {
   const [menuOpen,    setMenuOpen]    = useState(false);
   const [popupOpen,   setPopupOpen]   = useState(false);
   const [roomPopup,   setRoomPopup]   = useState(null);
+  const [roomVariant, setRoomVariant] = useState("deluxe");
+  const [langOpen,    setLangOpen]    = useState(false);
+  const langRef = useRef(null);
+
+  useEffect(() => {
+    const close = (e) => { if (langRef.current && !langRef.current.contains(e.target)) setLangOpen(false); };
+    document.addEventListener("mousedown", close);
+    return () => document.removeEventListener("mousedown", close);
+  }, []);
   const [lightbox,    setLightbox]    = useState(null);
   const [formErrors,  setFormErrors]  = useState({});
   const [isMounted,   setIsMounted]   = useState(false);
@@ -227,6 +292,34 @@ export default function Home({ locales }) {
   };
 
   useEffect(() => { setIsMounted(true); }, []);
+
+  // Lock body scroll when any popup is open
+  useEffect(() => {
+    const isOpen = popupOpen || !!roomPopup;
+    if (isOpen) {
+      const scrollY = window.scrollY;
+      document.body.style.overflow   = "hidden";
+      document.body.style.position   = "fixed";
+      document.body.style.top        = `-${scrollY}px`;
+      document.body.style.width      = "100%";
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      const top = parseInt(document.body.style.top || "0", 10);
+      document.body.style.overflow   = "";
+      document.body.style.position   = "";
+      document.body.style.top        = "";
+      document.body.style.width      = "";
+      document.documentElement.style.overflow = "";
+      window.scrollTo(0, -top);
+    }
+    return () => {
+      document.body.style.overflow   = "";
+      document.body.style.position   = "";
+      document.body.style.top        = "";
+      document.body.style.width      = "";
+      document.documentElement.style.overflow = "";
+    };
+  }, [popupOpen, roomPopup]);
 
   useEffect(() => {
     const el = statsRef.current;
@@ -310,16 +403,35 @@ export default function Home({ locales }) {
                 </div>
               </div>
               <div className="topbar__right">
-                <div className="topbar__langs">
-                  {["tr", "en", "de"].map((l) => (
-                    <button
-                      key={l}
-                      className={`topbar__lang-btn${lang === l ? " active" : ""}`}
-                      onClick={() => setLang(l)}
-                    >
-                      {l.toUpperCase()}
-                    </button>
-                  ))}
+                <div className={`lang-switcher${langOpen ? " lang-switcher--open" : ""}`} ref={langRef}>
+                  <button className="lang-switcher__trigger" onClick={() => setLangOpen(o => !o)} aria-label="Dil Seç">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+                      <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                    </svg>
+                    <span className="lang-switcher__current">{lang.toUpperCase()}</span>
+                    <svg className="lang-switcher__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                  </button>
+                  {langOpen && (
+                    <div className="lang-switcher__dropdown">
+                      {[
+                        { code: "tr", label: "Türkçe",  flag: "TR" },
+                        { code: "en", label: "English", flag: "EN" },
+                        { code: "de", label: "Deutsch", flag: "DE" },
+                        { code: "ru", label: "Русский", flag: "RU" },
+                        { code: "es", label: "Español", flag: "ES" },
+                      ].map(({ code, label, flag }) => (
+                        <button
+                          key={code}
+                          className={`lang-switcher__option${lang === code ? " lang-switcher__option--active" : ""}`}
+                          onClick={() => { setLang(code); setLangOpen(false); }}
+                        >
+                          <span className={`lang-switcher__flag${/^[A-Z]+$/.test(flag) ? " lang-switcher__flag--text" : ""}`}>{flag}</span>
+                          <span>{label}</span>
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -358,6 +470,23 @@ export default function Home({ locales }) {
             {t.nav.map((n) => (
               <a key={n.href} href={n.href} onClick={closeMenu}>{n.label}</a>
             ))}
+            <div className="drawer__lang-row">
+              {[
+                { code: "tr", label: "Türkçe",  flag: "🇹🇷" },
+                { code: "en", label: "English", flag: "🇬🇧" },
+                { code: "de", label: "Deutsch", flag: "🇩🇪" },
+                { code: "ru", label: "Русский", flag: "🇷🇺" },
+                { code: "es", label: "Español", flag: "🇪🇸" },
+              ].map(({ code, label, flag }) => (
+                <button
+                  key={code}
+                  className={`drawer__lang-btn${lang === code ? " active" : ""}`}
+                  onClick={() => { setLang(code); setLangOpen(false); }}
+                >
+                  <span className={/^[A-Z]+$/.test(flag) ? "lang-switcher__flag--text" : ""}>{flag}</span><span>{label}</span>
+                </button>
+              ))}
+            </div>
             <button className="btn btn--primary" onClick={() => { closeMenu(); openPopup(); }}>
               {t.popup.ctaRoom}
             </button>
@@ -429,13 +558,20 @@ export default function Home({ locales }) {
               <div
                 key={i}
                 className="room-card"
-                onClick={() => setRoomPopup({ ...r, imgs: ROOM_IMGS[i] })}
+                onClick={() => {
+                  if (i === 1) { setRoomVariant("deluxe"); setRoomPopup({ ...r, hasVariants: true, variantImgs: ROOM_IMGS[1] }); }
+                  else setRoomPopup({ ...r, imgs: ROOM_IMGS[i] });
+                }}
                 role="button"
                 tabIndex={0}
-                onKeyDown={(e) => e.key === "Enter" && setRoomPopup({ ...r, imgs: ROOM_IMGS[i] })}
+                onKeyDown={(e) => {
+                  if (e.key !== "Enter") return;
+                  if (i === 1) { setRoomVariant("deluxe"); setRoomPopup({ ...r, hasVariants: true, variantImgs: ROOM_IMGS[1] }); }
+                  else setRoomPopup({ ...r, imgs: ROOM_IMGS[i] });
+                }}
               >
                 <div className="room-card__image">
-                  <img src={ROOM_IMGS[i][0]} alt={r.name} />
+                  <img src={Array.isArray(ROOM_IMGS[i]) ? ROOM_IMGS[i][0] : ROOM_IMGS[i].deluxe[0]} alt={r.name} />
                 </div>
                 <div className="room-card__overlay">
                   <h3 className="room-card__name">{r.name}</h3>
@@ -573,7 +709,7 @@ export default function Home({ locales }) {
         <div className="container">
           <div className="about__layout">
             <div className="about__image">
-              <img src="/images/dis-foto.jpg" alt="Sardunya Kız Öğrenci Yurdu" loading="lazy" />
+              <img src="/images/dis-foto.jpeg" alt="Sardunya Kız Öğrenci Yurdu" loading="lazy" />
             </div>
             <div>
               <div className="about__head">
@@ -617,7 +753,7 @@ export default function Home({ locales }) {
                 <SwiperSlide key={i}>
                   <div
                     className="gal-item"
-                    onClick={() => setLightbox({ imgs: GALLERY_IMGS.map((x) => x.src), idx: i })}
+                    onClick={(e) => { if (e.target.closest(".swiper-button-prev, .swiper-button-next")) return; setLightbox({ imgs: GALLERY_IMGS.map((x) => x.src), idx: i }); }}
                     role="button"
                     tabIndex={0}
                     onKeyDown={(e) => e.key === "Enter" && setLightbox({ imgs: GALLERY_IMGS.map((x) => x.src), idx: i })}
@@ -719,27 +855,33 @@ export default function Home({ locales }) {
       {roomPopup && (
         <div className={`popup-overlay${closingRoom ? " popup-overlay--closing" : ""}`} onClick={closeRoom}>
           <div className={`popup popup--room${closingRoom ? " popup--closing" : ""}`} onClick={(e) => e.stopPropagation()}>
-            <button className="popup__close" onClick={closeRoom} aria-label="Kapat">✕</button>
+            <button className="popup__close popup__close--light" onClick={closeRoom} aria-label="Kapat">✕</button>
             <div className="room-popup__swiper">
-              <Swiper modules={[Navigation, Pagination]} navigation pagination={{ clickable: true }} loop={roomPopup.imgs.length > 1}>
-                {roomPopup.imgs.map((img, i) => (
+              <Swiper key={roomPopup.hasVariants ? roomVariant : "single"} modules={[Navigation, Pagination]} navigation pagination={{ clickable: true }} loop={(roomPopup.hasVariants ? roomPopup.variantImgs[roomVariant] : roomPopup.imgs).length > 1}>
+                {(roomPopup.hasVariants ? roomPopup.variantImgs[roomVariant] : roomPopup.imgs).map((img, i) => (
                   <SwiperSlide key={i}>
-                    <div className="room-popup__slide" onClick={() => setLightbox({ imgs: roomPopup.imgs, idx: i })}>
+                    <div className="room-popup__slide" onClick={() => setLightbox({ imgs: roomPopup.hasVariants ? roomPopup.variantImgs[roomVariant] : roomPopup.imgs, idx: i })}>
                       <img src={img} alt={`${roomPopup.name} ${i + 1}`} />
                     </div>
                   </SwiperSlide>
                 ))}
               </Swiper>
             </div>
-            <span className="room-popup__type">{roomPopup.type}</span>
-            <h2 className="popup__title">{roomPopup.name}</h2>
-            <div className="room-popup__tags">
-              {roomPopup.tags.map((tag) => <span key={tag} className="room-popup__tag">{tag}</span>)}
+            <div className="room-popup__content">
+              {roomPopup.hasVariants && (
+                <div className="room-popup__variants">
+                  <button className={`room-popup__variant-btn${roomVariant === "normal" ? " room-popup__variant-btn--active" : ""}`} onClick={() => setRoomVariant("normal")}>Normal</button>
+                  <button className={`room-popup__variant-btn${roomVariant === "deluxe" ? " room-popup__variant-btn--active" : ""}`} onClick={() => setRoomVariant("deluxe")}>Deluxe</button>
+                </div>
+              )}
+              <h2 className="room-popup__name">{roomPopup.name}</h2>
+              <div className="room-popup__tags">
+                {roomPopup.tags.map((tag) => <span key={tag} className="room-popup__tag">{tag}</span>)}
+              </div>
+              <button className="btn btn--primary room-popup__cta" onClick={() => { setRoomPopup(null); openPopup(); }}>
+                {t.popup.ctaRoom}
+              </button>
             </div>
-            <div className="room-popup__price">{roomPopup.price}<small>{roomPopup.per}</small></div>
-            <button className="btn btn--primary contact__submit" onClick={() => { setRoomPopup(null); openPopup(); }}>
-              {t.popup.ctaRoom}
-            </button>
           </div>
         </div>
       )}
@@ -816,7 +958,7 @@ export async function getStaticProps() {
     JSON.parse(fs.readFileSync(path.join(process.cwd(), `public/locales/${locale}.json`), "utf-8"));
   return {
     props: {
-      locales: { tr: load("tr"), en: load("en"), de: load("de") },
+      locales: { tr: load("tr"), en: load("en"), de: load("de"), ru: load("ru"), es: load("es") },
     },
   };
 }

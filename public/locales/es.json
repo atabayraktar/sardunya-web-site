@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "title": "Sardunya Residencia Femenina | Çanakkale",
+    "description": "La residencia estudiantil femenina más segura y confortable de Çanakkale. Espacios de vida tranquilos con 14 años de experiencia."
+  },
+  "nav": [
+    { "href": "#sertifikalar", "label": "Certificados" },
+    { "href": "#odalar",       "label": "Habitaciones" },
+    { "href": "#hizmetler",    "label": "Servicios" },
+    { "href": "#tesisler",     "label": "Instalaciones" },
+    { "href": "#kayit",        "label": "Documentos" },
+    { "href": "#iletisim",     "label": "Contacto" },
+    { "href": "#hakkimizda",   "label": "Sobre Nosotros" },
+    { "href": "#galeri",       "label": "Galería" }
+  ],
+  "hero": {
+    "title": "Sardunya",
+    "subtitle": "Residencia Estudiantil Femenina",
+    "sub": "Construye tu futuro en espacios de vida seguros, confortables y modernos. En el corazón de Çanakkale, a 3 minutos caminando del campus.",
+    "cta1": "Preinscripción",
+    "cta2": "Contáctenos",
+    "pensionNote": "En períodos de verano se ofrecen servicios de pensión para familias."
+  },
+  "stats": [
+    { "val": "850+", "lbl": "Estudiantes Felices" },
+    { "val": "15",   "lbl": "Años de Experiencia" },
+    { "val": "7/24", "lbl": "Seguridad" },
+    { "val": "2 min","lbl": "Al Campus" }
+  ],
+  "certsSection": {
+    "label": "Documentos y Certificados",
+    "title": "Prueba de Nuestra Fiabilidad",
+    "sub": "Ofrecemos a nuestros estudiantes el entorno de vida más seguro con nuestros certificados que cumplen todos los estándares."
+  },
+  "certItems": [
+    { "label": "Certificado TSE",       "icon": "cert" },
+    { "label": "Seguridad Contra Incendios", "icon": "fire" },
+    { "label": "Certificado de Higiene","icon": "hyg"  },
+    { "label": "Certificado de Calidad","icon": "med"  },
+    { "label": "ISO 9001",              "icon": "iso"  }
+  ],
+  "roomsSection": {
+    "label": "Nuestras Habitaciones",
+    "title": "Espacios de Vida Confortables"
+  },
+  "roomItems": [
+    { "name": "Habitación Individual", "tags": ["Televisión", "Nevera Compartida", "Escritorio Propio", "Armario",         "Mobiliario de Primera Calidad", "Baño Privado"] },
+    { "name": "Habitación Doble",      "tags": ["Televisión", "Nevera Compartida", "Mesa Propia",        "Armario Propio",  "Terraza",                       "Baño Privado"] },
+    { "name": "Habitación Triple",     "tags": ["Televisión", "Nevera Compartida", "Mesa Propia",        "Armario Propio",  "Balcón",                        "Baño Privado"] }
+  ],
+  "servicesSection": {
+    "label": "Nuestros Servicios",
+    "title": "Todo lo que Necesitas"
+  },
+  "serviceItems": [
+    { "title": "Internet Ilimitado",              "desc": "Disfruta de internet sin interrupciones gracias a nuestra conexión ilimitada y rápida.",                                                         "icon": "wifi"     },
+    { "title": "Agua Caliente 24/7",              "desc": "Agua caliente disponible las 24 horas del día.",                                                                                                "icon": "drop"     },
+    { "title": "Calefacción a Gas Natural",       "desc": "Sistema central de calefacción a gas natural disponible 24/7 en invierno.",                                                                     "icon": "thermo"   },
+    { "title": "Certificado Antisísmico",         "desc": "Tu seguridad es importante para nosotros, por eso el edificio fue diseñado conforme a la normativa sísmica.",                                   "icon": "build"    },
+    { "title": "Desayuno Buffet",                 "desc": "Ofrecemos un desayuno excelente que no envidia al de casa. Desayuno tardío los fines de semana.",                                               "icon": "food"     },
+    { "title": "Pensión en Verano",               "desc": "En períodos de verano hay servicio de pensión para familias.",                                                                                  "icon": "sun"      },
+    { "title": "Sala de Estudio",                 "desc": "Un entorno tranquilo y espacioso para preparar tus clases y exámenes.",                                                                         "icon": "study"    },
+    { "title": "Sala de Internet",                "desc": "Un espacio donde puedes disfrutar plenamente de internet.",                                                                                     "icon": "monitor"  },
+    { "title": "Sala de TV y Descanso",           "desc": "Una sala donde puedes relajarte y ver películas o series después de un largo día.",                                                             "icon": "tv"       },
+    { "title": "Cocina Equipada",                 "desc": "En nuestra cocina completamente equipada puedes preparar tus propias comidas.",                                                                 "icon": "utensils" },
+    { "title": "Lavandería Gratuita",             "desc": "Servicio de lavandería gratuito disponible para tu comodidad.",                                                                                 "icon": "laundry"  },
+    { "title": "Seguridad con Cámaras 7/24",      "desc": "Para tu seguridad, la residencia está vigilada con cámaras de seguridad las 24 horas.",                                                        "icon": "camera"   }
+  ],
+  "facilitiesSection": {
+    "label": "Nuestras Instalaciones",
+    "title": "Instalaciones Modernas y Equipadas",
+    "sub": "Ofrecemos instalaciones modernas para apoyar el desarrollo académico y social de nuestros estudiantes."
+  },
+  "facilityItems": [
+    { "title": "Sala de Estudio", "desc": "Una sala de estudio tranquila y espaciosa para preparar exámenes y clases diarias." },
+    { "title": "Sala de Descanso","desc": "Un lugar para descansar, ver la televisión y conversar con amigos." },
+    { "title": "Comedor",         "desc": "Un amplio comedor donde puedes pedir comidas de nuestro servicio de catering asociado." },
+    { "title": "Cocina",          "desc": "Cocina disponible 24/7 donde puedes preparar tus propias comidas y aperitivos." }
+  ],
+  "regDocsSection": {
+    "label": "Registro",
+    "title": "Documentos Necesarios para el Registro",
+    "sub": "Se requieren algunos documentos para alojarse en nuestra residencia. Los hemos listado para facilitar el proceso.",
+    "items": [
+      "Solicitud de Registro",
+      "Copia del DNI",
+      "Certificado de Estudiante",
+      "Antecedentes Penales de la Fiscalía",
+      "Certificado médico que acredite que el estado de salud permite residir en la residencia",
+      "4 Fotografías"
+    ],
+    "note": "Traer todos los documentos completos agilizará el proceso de registro. Para más información puede llamarnos o rellenar el formulario de preinscripción."
+  },
+  "contactSection": {
+    "label": "Contacto y Ubicación",
+    "title": "¿Cómo Llegar?",
+    "contactTitle": "Información de Contacto",
+    "address": "Barrio Cevatpaşa, Calle 1. Çanakçılar N.º 18, Çanakkale/Centro",
+    "addressShort": "Cevatpaşa Mah. 1. Çanakçılar Sok. N.º 18, Çanakkale",
+    "phones": ["0286 212 4030", "0530 038 6648", "0537 222 8852"],
+    "email": "sardunyakizogrenci@gmail.com",
+    "hours": "Lun–Vie 08:00–18:00 | Sáb 09:00–14:00",
+    "nearbyPlaces": {
+      "title": "Lugares Cercanos",
+      "items": [
+        { "name": "Facultad de Educación ÇOMÜ",  "distance": "500 m",  "type": "university" },
+        { "name": "Campus Terzioğlu ÇOMÜ",        "distance": "4,5 km", "type": "university" },
+        { "name": "Puerto / Torre del Reloj",      "distance": "1 km",   "type": "landmark"   },
+        { "name": "Parada de Autobús más Cercana", "distance": "50 m",   "type": "bus"        },
+        { "name": "Hospital Público",              "distance": "500 m",  "type": "hospital"   },
+        { "name": "Centro Comercial",              "distance": "3 km",   "type": "shopping"   }
+      ]
+    }
+  },
+  "aboutSection": {
+    "label": "Sobre Nosotros",
+    "title": "La Dirección de Confianza en Çanakkale",
+    "text": "La Residencia Estudiantil Femenina Sardunya, que entró en plena actividad en 2011, ha proporcionado a Çanakkale un espacio de vida moderno gracias a su calidad, altos estándares y gestión tolerante con los estudiantes. Creemos que las condiciones de alojamiento deben satisfacer las necesidades de manera completa y ágil para que los estudiantes tengan una vida universitaria exitosa. Con este compromiso, siempre ponemos la satisfacción de nuestros valiosos estudiantes en primer lugar.",
+    "points": [
+      "Ofrecemos servicio ininterrumpido desde 2011.",
+      "Una residencia moderna que aplica estándares de calidad mundiales.",
+      "Apoyamos a los estudiantes a hacer un uso eficiente de su tiempo.",
+      "Estamos a tu lado con un equipo directivo tolerante y experimentado."
+    ]
+  },
+  "gallerySection": {
+    "label": "Galería",
+    "title": "Descubre Nuestra Residencia"
+  },
+  "footer": {
+    "copy": "© 2026 Sardunya Residencia Estudiantil Femenina. Todos los derechos reservados."
+  },
+  "popup": {
+    "title": "Formulario de Preinscripción",
+    "sub": "Déjanos tus datos y nos pondremos en contacto contigo lo antes posible.",
+    "nameLbl": "Nombre y Apellido",
+    "namePh": "Tu Nombre y Apellido",
+    "phoneLbl": "Teléfono",
+    "phonePh": "+90 5xx xxx xx xx",
+    "emailLbl": "Correo Electrónico",
+    "emailPh": "ejemplo@email.com",
+    "roomLbl": "Tipo de Habitación Preferida",
+    "roomPh": "Seleccione...",
+    "roomOptions": ["Habitación Individual", "Habitación Doble", "Habitación Doble - Deluxe", "Habitación Triple"],
+    "deptLbl": "Tu Carrera",
+    "deptPh": "Introduce el nombre de la carrera",
+    "gradeLbl": "Curso",
+    "gradePh": "Seleccione...",
+    "gradeOptions": ["Preparatorio", "1.er Curso", "2.º Curso", "3.er Curso", "4.º Curso", "5.º Curso", "Máster", "Doctorado"],
+    "noteLbl": "Nota",
+    "notePh": "¿Hay algo que quieras añadir?",
+    "cta": "Enviar Solicitud",
+    "ctaRoom": "Formulario de Preinscripción",
+    "errorRequired": "Este campo es obligatorio"
+  }
+}

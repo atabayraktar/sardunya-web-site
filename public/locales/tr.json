@@ -98,7 +98,7 @@
     "address": "Cevatpaşa Mah. 1. Çanakçılar Sokak No: 18 Çanakkale/Merkez",
     "addressShort": "Cevatpaşa Mah. 1. Çanakçılar Sokak No: 18, Çanakkale",
     "phones": ["0286 212 4030", "0530 038 6648", "0537 222 8852"],
-    "email": "sardunyayurt@gmail.com",
+    "email": "sardunyakizogrenci@gmail.com",
     "hours": "Pzt–Cum 08:00–18:00 | Cmt 09:00–14:00",
     "nearbyPlaces": {
       "title": "Yakın Yerler",
@@ -141,7 +141,7 @@
     "emailPh": "ornek@email.com",
     "roomLbl": "Tercih Ettiğiniz Oda Tipi",
     "roomPh": "Seçiniz...",
-    "roomOptions": ["Tek Kişilik Oda", "Çift Kişilik Oda", "Üç Kişilik Oda"],
+    "roomOptions": ["Tek Kişilik Oda", "Çift Kişilik Oda", "Çift Kişilik - Deluxe", "Üç Kişilik Oda"],
     "deptLbl": "Okuduğunuz Bölüm",
     "deptPh": "Bölüm adını giriniz",
     "gradeLbl": "Sınıf",
