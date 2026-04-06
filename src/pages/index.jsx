@@ -1,7 +1,44 @@
 import Head from "next/head";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper";
+
+// ─── Custom Select ───────────────────────────────────────────────────────────
+function CustomSelect({ id, placeholder, options, hasError, onClearError }) {
+  const [open, setOpen]     = useState(false);
+  const [selected, setSel]  = useState("");
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const handler = (e) => { if (ref.current && !ref.current.contains(e.target)) setOpen(false); };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
+  const pick = (val) => { setSel(val); setOpen(false); onClearError(); };
+
+  return (
+    <div className={`cselect${open ? " cselect--open" : ""}${hasError ? " cselect--error" : ""}`} ref={ref}>
+      <input type="hidden" id={id} name={id} value={selected} readOnly />
+      <button type="button" className="cselect__trigger" onClick={() => setOpen((o) => !o)} aria-haspopup="listbox" aria-expanded={open}>
+        <span className={selected ? "cselect__value" : "cselect__placeholder"}>{selected || placeholder}</span>
+        <svg className="cselect__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      {open && (
+        <ul className="cselect__list" role="listbox">
+          {options.map((opt) => (
+            <li key={opt} role="option" aria-selected={selected === opt}
+              className={`cselect__option${selected === opt ? " cselect__option--active" : ""}`}
+              onMouseDown={(e) => { e.preventDefault(); pick(opt); }}>
+              {opt}
+              {selected === opt && <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
 
 // ─── Static image data (not translated) ──────────────────────────────────────
 const ROOM_IMGS = [
@@ -154,6 +191,33 @@ export default function Home({ locales }) {
         <div className="topbar">
           <div className="container">
             <div className="topbar__inner">
+              {/* Mobile scrolling ticker */}
+              <div className="topbar__ticker-wrap" aria-hidden="true">
+                <div className="topbar__ticker-track">
+                  {[0, 1].map((i) => (
+                    <span key={i} className="topbar__ticker-set">
+                      <span className="topbar__item">
+                        <PhoneIcon />
+                        {t.contactSection.phones.map((phone, idx) => (
+                          <span key={phone}>{idx > 0 && " / "}<a href={`tel:${phone.replace(/\s/g, "")}`} className="topbar__phone-link">{phone}</a></span>
+                        ))}
+                      </span>
+                      <span className="topbar__ticker-dot">◆</span>
+                      <a href={`mailto:${t.contactSection.email}`} className="topbar__item">
+                        <MailIcon /> {t.contactSection.email}
+                      </a>
+                      <span className="topbar__ticker-dot">◆</span>
+                      <a href="https://www.instagram.com/sardunyakizyurdu" target="_blank" rel="noopener noreferrer" className="topbar__item topbar__ticker-social">
+                        <IgIcon />
+                      </a>
+                      <a href="https://www.facebook.com/profile.php?id=100070014077020" target="_blank" rel="noopener noreferrer" className="topbar__item topbar__ticker-social">
+                        <FbIcon />
+                      </a>
+                      <span className="topbar__ticker-dot">◆</span>
+                    </span>
+                  ))}
+                </div>
+              </div>
               <div className="topbar__contact">
                 <span className="topbar__item"><PhoneIcon /> {t.contactSection.phones.map((phone, i) => (
                   <span key={phone}>{i > 0 && " / "}<a href={`tel:${phone.replace(/\s/g, "")}`} className="topbar__phone-link">{phone}</a></span>
@@ -222,7 +286,8 @@ export default function Home({ locales }) {
 
       {/* ── HERO ── */}
       <section className="hero">
-        <img src="/images/sardunya_hero.svg" className="hero__bg-svg" aria-hidden alt="" />
+        <img src="/images/sardunya_hero.svg" className="hero__bg-svg hero__bg-svg--desktop" aria-hidden alt="" />
+        <img src="/images/sardunya_hero_mobile.svg" className="hero__bg-svg hero__bg-svg--mobile" aria-hidden alt="" />
         <div className="hero__overlay" aria-hidden />
         <div className="hero__content">
           <h1 className="hero__title">
@@ -387,9 +452,17 @@ export default function Home({ locales }) {
               <h3 className="contact-block__title">{t.contactSection.contactTitle}</h3>
               <div className="contact-block__items">
                 <div className="contact-block__item"><MapIcon /> {t.contactSection.address}</div>
-                <div className="contact-block__item"><PhoneIcon /> {t.contactSection.phones.map((phone, i) => (
-                  <span key={phone}>{i > 0 && " / "}<a href={`tel:${phone.replace(/\s/g, "")}`} className="contact-block__phone-link">{phone}</a></span>
-                ))}</div>
+                <div className="contact-block__item">
+                  <PhoneIcon />
+                  <span className="contact-block__phone-list">
+                    {t.contactSection.phones.map((phone, i) => (
+                      <span key={phone} className="contact-block__phone-entry">
+                        {i > 0 && <span className="contact-block__phone-sep"> / </span>}
+                        <a href={`tel:${phone.replace(/\s/g, "")}`} className="contact-block__phone-link">{phone}</a>
+                      </span>
+                    ))}
+                  </span>
+                </div>
                 <a href={`mailto:${t.contactSection.email}`} className="contact-block__item contact-block__item--link"><MailIcon /> {t.contactSection.email}</a>
               </div>
               <button className="btn btn--primary contact-block__cta" onClick={() => openPopup()}>
@@ -603,19 +676,25 @@ export default function Home({ locales }) {
                   {formErrors["p-dept"] && <span className="form-error"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="1.5"/><path d="M8 5v3.5M8 11h.01" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>{t.popup.errorRequired}</span>}
                 </div>
                 <div className="fg">
-                  <label htmlFor="p-grade">{t.popup.gradeLbl} <span aria-hidden>*</span></label>
-                  <select id="p-grade" className={formErrors["p-grade"] ? "input--error" : ""} onChange={() => setFormErrors((p) => ({ ...p, "p-grade": false }))}>
-                    <option value="">{t.popup.gradePh}</option>
-                    {t.popup.gradeOptions.map((o) => <option key={o}>{o}</option>)}
-                  </select>
+                  <label>{t.popup.gradeLbl} <span aria-hidden>*</span></label>
+                  <CustomSelect
+                    id="p-grade"
+                    placeholder={t.popup.gradePh}
+                    options={t.popup.gradeOptions}
+                    hasError={!!formErrors["p-grade"]}
+                    onClearError={() => setFormErrors((p) => ({ ...p, "p-grade": false }))}
+                  />
                   {formErrors["p-grade"] && <span className="form-error"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="1.5"/><path d="M8 5v3.5M8 11h.01" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>{t.popup.errorRequired}</span>}
                 </div>
                 <div className="fg contact__form-full">
-                  <label htmlFor="p-room">{t.popup.roomLbl} <span aria-hidden>*</span></label>
-                  <select id="p-room" className={formErrors["p-room"] ? "input--error" : ""} onChange={() => setFormErrors((p) => ({ ...p, "p-room": false }))}>
-                    <option value="">{t.popup.roomPh}</option>
-                    {t.popup.roomOptions.map((o) => <option key={o}>{o}</option>)}
-                  </select>
+                  <label>{t.popup.roomLbl} <span aria-hidden>*</span></label>
+                  <CustomSelect
+                    id="p-room"
+                    placeholder={t.popup.roomPh}
+                    options={t.popup.roomOptions}
+                    hasError={!!formErrors["p-room"]}
+                    onClearError={() => setFormErrors((p) => ({ ...p, "p-room": false }))}
+                  />
                   {formErrors["p-room"] && <span className="form-error"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="1.5"/><path d="M8 5v3.5M8 11h.01" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>{t.popup.errorRequired}</span>}
                 </div>
                 <div className="fg contact__form-full">

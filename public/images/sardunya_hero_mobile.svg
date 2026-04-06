@@ -1,0 +1,258 @@
+<svg width="100%" viewBox="0 0 430 760" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="msky" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#f5e6d8"/>
+      <stop offset="60%" stop-color="#e8c9b8"/>
+      <stop offset="100%" stop-color="#d4a896"/>
+    </linearGradient>
+    <linearGradient id="mbgOv" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fdf0e8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e8c0a0" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="mleaf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a7c3f"/>
+      <stop offset="100%" stop-color="#2d5a22"/>
+    </linearGradient>
+    <linearGradient id="mleaf2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5e9e52"/>
+      <stop offset="100%" stop-color="#3a7030"/>
+    </linearGradient>
+    <linearGradient id="mp1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e85c8a"/>
+      <stop offset="100%" stop-color="#c0335f"/>
+    </linearGradient>
+    <linearGradient id="mp2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f07aaa"/>
+      <stop offset="100%" stop-color="#d04a7a"/>
+    </linearGradient>
+    <linearGradient id="mp3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9ec0"/>
+      <stop offset="100%" stop-color="#e0608a"/>
+    </linearGradient>
+    <linearGradient id="mp4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d44a80"/>
+      <stop offset="100%" stop-color="#a82a56"/>
+    </linearGradient>
+    <linearGradient id="mstem" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3a6632"/>
+      <stop offset="100%" stop-color="#5a8a4a"/>
+    </linearGradient>
+    <linearGradient id="mpot1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c07850"/>
+      <stop offset="100%" stop-color="#8a4e2a"/>
+    </linearGradient>
+    <linearGradient id="mpot2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4906a"/>
+      <stop offset="100%" stop-color="#a06040"/>
+    </linearGradient>
+    <style>
+      #mf1 { animation: mfA 4s   ease-in-out infinite; }
+      #mf2 { animation: mfB 5.5s ease-in-out infinite 0.7s; }
+      #mf3 { animation: mfC 3.5s ease-in-out infinite 1.2s; }
+      #mf4 { animation: mfD 4.8s ease-in-out infinite 0.3s; }
+      @keyframes mfA {
+        0%,100% { transform: translate(75px,140px); }
+        50%     { transform: translate(75px,129px); }
+      }
+      @keyframes mfB {
+        0%,100% { transform: translate(355px,118px); }
+        40%     { transform: translate(358px,108px); }
+        60%     { transform: translate(351px,110px); }
+      }
+      @keyframes mfC {
+        0%,100% { transform: translate(52px,318px); }
+        50%     { transform: translate(54px,307px); }
+      }
+      @keyframes mfD {
+        0%,100% { transform: translate(378px,296px); }
+        50%     { transform: translate(375px,285px); }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="430" height="760" fill="url(#msky)"/>
+  <rect width="430" height="760" fill="url(#mbgOv)"/>
+
+  <!-- Soft blobs -->
+  <ellipse cx="385" cy="88" rx="165" ry="125" fill="#fde8dc" fill-opacity="0.4"/>
+  <ellipse cx="45"  cy="68" rx="155" ry="108" fill="#f9e4d4" fill-opacity="0.3"/>
+  <ellipse cx="215" cy="655" rx="210" ry="85" fill="#d4906a" fill-opacity="0.12"/>
+
+  <!-- Decorative dots -->
+  <circle cx="118" cy="158" r="4"   fill="#e06888" fill-opacity="0.5"/>
+  <circle cx="312" cy="128" r="3"   fill="#e06888" fill-opacity="0.4"/>
+  <circle cx="215" cy="82"  r="3"   fill="#e85c8a" fill-opacity="0.4"/>
+  <circle cx="395" cy="222" r="3"   fill="#c04468" fill-opacity="0.35"/>
+  <circle cx="38"  cy="262" r="2.5" fill="#e06888" fill-opacity="0.4"/>
+  <circle cx="392" cy="385" r="2"   fill="#c04468" fill-opacity="0.3"/>
+
+  <!-- ── Floating mini flowers ── -->
+  <g id="mf1">
+    <ellipse cx="0" cy="-10" rx="6" ry="9" fill="url(#mp2)" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-10" rx="6" ry="9" fill="url(#mp1)" transform="rotate(72)"/>
+    <ellipse cx="0" cy="-10" rx="6" ry="9" fill="url(#mp3)" transform="rotate(144)"/>
+    <ellipse cx="0" cy="-10" rx="6" ry="9" fill="url(#mp4)" transform="rotate(216)"/>
+    <ellipse cx="0" cy="-10" rx="6" ry="9" fill="url(#mp2)" transform="rotate(288)"/>
+    <circle  cx="0" cy="0"   r="4"  fill="#ffd8e8"/>
+  </g>
+  <g id="mf2">
+    <ellipse cx="0" cy="-10" rx="6" ry="9" fill="url(#mp3)" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-10" rx="6" ry="9" fill="url(#mp4)" transform="rotate(72)"/>
+    <ellipse cx="0" cy="-10" rx="6" ry="9" fill="url(#mp1)" transform="rotate(144)"/>
+    <ellipse cx="0" cy="-10" rx="6" ry="9" fill="url(#mp2)" transform="rotate(216)"/>
+    <ellipse cx="0" cy="-10" rx="6" ry="9" fill="url(#mp3)" transform="rotate(288)"/>
+    <circle  cx="0" cy="0"   r="4"  fill="#ffd0e0"/>
+  </g>
+  <g id="mf3">
+    <ellipse cx="0" cy="-8" rx="5" ry="8" fill="url(#mp1)" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-8" rx="5" ry="8" fill="url(#mp3)" transform="rotate(72)"/>
+    <ellipse cx="0" cy="-8" rx="5" ry="8" fill="url(#mp2)" transform="rotate(144)"/>
+    <ellipse cx="0" cy="-8" rx="5" ry="8" fill="url(#mp4)" transform="rotate(216)"/>
+    <ellipse cx="0" cy="-8" rx="5" ry="8" fill="url(#mp1)" transform="rotate(288)"/>
+    <circle  cx="0" cy="0"  r="3"  fill="#ffc8da"/>
+  </g>
+  <g id="mf4">
+    <ellipse cx="0" cy="-8" rx="5" ry="8" fill="url(#mp4)" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-8" rx="5" ry="8" fill="url(#mp2)" transform="rotate(72)"/>
+    <ellipse cx="0" cy="-8" rx="5" ry="8" fill="url(#mp1)" transform="rotate(144)"/>
+    <ellipse cx="0" cy="-8" rx="5" ry="8" fill="url(#mp3)" transform="rotate(216)"/>
+    <ellipse cx="0" cy="-8" rx="5" ry="8" fill="url(#mp4)" transform="rotate(288)"/>
+    <circle  cx="0" cy="0"  r="3"  fill="#ffcce0"/>
+  </g>
+
+  <!-- Scattered leaves near floats -->
+  <ellipse cx="100" cy="164" rx="16" ry="8" fill="url(#mleaf2)" transform="rotate(-20 100 164)" fill-opacity="0.7"/>
+  <ellipse cx="332" cy="148" rx="16" ry="8" fill="url(#mleaf)"  transform="rotate(25 332 148)"  fill-opacity="0.7"/>
+  <ellipse cx="76"  cy="336" rx="14" ry="7" fill="url(#mleaf2)" transform="rotate(-15 76 336)"   fill-opacity="0.6"/>
+  <ellipse cx="358" cy="310" rx="14" ry="7" fill="url(#mleaf)"  transform="rotate(18 358 310)"   fill-opacity="0.6"/>
+
+  <!-- ════════════ CENTER BIG POT ════════════ -->
+  <!-- Rim strip -->
+  <rect x="155" y="648" width="120" height="14" rx="7" fill="#a06040"/>
+  <!-- Bottom curve -->
+  <path d="M163 662 Q215 730 267 662 Z" fill="url(#mpot1)"/>
+  <!-- Body -->
+  <rect x="167" y="604" width="96" height="60" rx="7" fill="url(#mpot2)"/>
+  <!-- Rim highlight -->
+  <rect x="167" y="604" width="96" height="12" rx="6" fill="#e0a070"/>
+  <!-- Soil -->
+  <ellipse cx="215" cy="611" rx="44" ry="9" fill="#5a3820"/>
+
+  <!-- Stems -->
+  <line x1="215" y1="611" x2="193" y2="418" stroke="url(#mstem)" stroke-width="5" stroke-linecap="round"/>
+  <line x1="215" y1="611" x2="230" y2="398" stroke="url(#mstem)" stroke-width="5" stroke-linecap="round"/>
+  <line x1="215" y1="611" x2="252" y2="450" stroke="url(#mstem)" stroke-width="4" stroke-linecap="round"/>
+  <line x1="215" y1="611" x2="175" y2="458" stroke="url(#mstem)" stroke-width="4" stroke-linecap="round"/>
+  <line x1="193" y1="498" x2="158" y2="452" stroke="url(#mstem)" stroke-width="3" stroke-linecap="round"/>
+  <line x1="230" y1="488" x2="266" y2="448" stroke="url(#mstem)" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Leaves on stems -->
+  <ellipse cx="190" cy="534" rx="22" ry="9" fill="url(#mleaf2)" transform="rotate(-30 190 534)" fill-opacity="0.85"/>
+  <ellipse cx="237" cy="514" rx="22" ry="9" fill="url(#mleaf)"  transform="rotate(25 237 514)"  fill-opacity="0.85"/>
+  <ellipse cx="168" cy="482" rx="18" ry="8" fill="url(#mleaf2)" transform="rotate(-20 168 482)" fill-opacity="0.80"/>
+  <ellipse cx="254" cy="470" rx="18" ry="8" fill="url(#mleaf)"  transform="rotate(20 254 470)"  fill-opacity="0.80"/>
+
+  <!-- Flowers at stem tips (large) -->
+  <g transform="translate(193,413)">
+    <ellipse cx="0" cy="-14" rx="8" ry="13" fill="url(#mp2)" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-14" rx="8" ry="13" fill="url(#mp1)" transform="rotate(72)"/>
+    <ellipse cx="0" cy="-14" rx="8" ry="13" fill="url(#mp3)" transform="rotate(144)"/>
+    <ellipse cx="0" cy="-14" rx="8" ry="13" fill="url(#mp4)" transform="rotate(216)"/>
+    <ellipse cx="0" cy="-14" rx="8" ry="13" fill="url(#mp2)" transform="rotate(288)"/>
+    <circle  cx="0" cy="0"   r="6"  fill="#ffd0e8"/>
+  </g>
+  <g transform="translate(230,393)">
+    <ellipse cx="0" cy="-15" rx="9" ry="14" fill="url(#mp3)" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-15" rx="9" ry="14" fill="url(#mp1)" transform="rotate(72)"/>
+    <ellipse cx="0" cy="-15" rx="9" ry="14" fill="url(#mp4)" transform="rotate(144)"/>
+    <ellipse cx="0" cy="-15" rx="9" ry="14" fill="url(#mp2)" transform="rotate(216)"/>
+    <ellipse cx="0" cy="-15" rx="9" ry="14" fill="url(#mp3)" transform="rotate(288)"/>
+    <circle  cx="0" cy="0"   r="7"  fill="#ffc8e0"/>
+  </g>
+  <g transform="translate(252,445)">
+    <ellipse cx="0" cy="-12" rx="7" ry="11" fill="url(#mp4)" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-12" rx="7" ry="11" fill="url(#mp2)" transform="rotate(72)"/>
+    <ellipse cx="0" cy="-12" rx="7" ry="11" fill="url(#mp1)" transform="rotate(144)"/>
+    <ellipse cx="0" cy="-12" rx="7" ry="11" fill="url(#mp3)" transform="rotate(216)"/>
+    <ellipse cx="0" cy="-12" rx="7" ry="11" fill="url(#mp4)" transform="rotate(288)"/>
+    <circle  cx="0" cy="0"   r="5"  fill="#ffcce4"/>
+  </g>
+  <g transform="translate(175,453)">
+    <ellipse cx="0" cy="-11" rx="7" ry="10" fill="url(#mp1)" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-11" rx="7" ry="10" fill="url(#mp3)" transform="rotate(72)"/>
+    <ellipse cx="0" cy="-11" rx="7" ry="10" fill="url(#mp4)" transform="rotate(144)"/>
+    <ellipse cx="0" cy="-11" rx="7" ry="10" fill="url(#mp2)" transform="rotate(216)"/>
+    <ellipse cx="0" cy="-11" rx="7" ry="10" fill="url(#mp1)" transform="rotate(288)"/>
+    <circle  cx="0" cy="0"   r="5"  fill="#ffd4ec"/>
+  </g>
+  <!-- Sub-branch flowers (smaller) -->
+  <g transform="translate(158,447)">
+    <ellipse cx="0" cy="-9" rx="5.5" ry="9" fill="url(#mp2)" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-9" rx="5.5" ry="9" fill="url(#mp4)" transform="rotate(72)"/>
+    <ellipse cx="0" cy="-9" rx="5.5" ry="9" fill="url(#mp1)" transform="rotate(144)"/>
+    <ellipse cx="0" cy="-9" rx="5.5" ry="9" fill="url(#mp3)" transform="rotate(216)"/>
+    <ellipse cx="0" cy="-9" rx="5.5" ry="9" fill="url(#mp2)" transform="rotate(288)"/>
+    <circle  cx="0" cy="0"  r="4"  fill="#ffcce8"/>
+  </g>
+  <g transform="translate(266,443)">
+    <ellipse cx="0" cy="-9" rx="5.5" ry="9" fill="url(#mp3)" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-9" rx="5.5" ry="9" fill="url(#mp1)" transform="rotate(72)"/>
+    <ellipse cx="0" cy="-9" rx="5.5" ry="9" fill="url(#mp2)" transform="rotate(144)"/>
+    <ellipse cx="0" cy="-9" rx="5.5" ry="9" fill="url(#mp4)" transform="rotate(216)"/>
+    <ellipse cx="0" cy="-9" rx="5.5" ry="9" fill="url(#mp3)" transform="rotate(288)"/>
+    <circle  cx="0" cy="0"  r="4"  fill="#ffd0e4"/>
+  </g>
+
+  <!-- ════════════ LEFT PARTIAL POT ════════════ -->
+  <rect x="-8"  y="682" width="98"  height="12" rx="6" fill="#a06040"/>
+  <path d="M0 694 Q41 742 82 694 Z" fill="url(#mpot1)"/>
+  <rect x="4"   y="644" width="74"  height="52" rx="6" fill="url(#mpot2)"/>
+  <rect x="4"   y="644" width="74"  height="10" rx="5" fill="#e0a070"/>
+  <ellipse cx="41" cy="650" rx="33" ry="7" fill="#5a3820"/>
+  <line x1="41" y1="650" x2="22" y2="518" stroke="url(#mstem)" stroke-width="4" stroke-linecap="round"/>
+  <line x1="41" y1="650" x2="58" y2="542" stroke="url(#mstem)" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="30" cy="582" rx="18" ry="7" fill="url(#mleaf2)" transform="rotate(-25 30 582)" fill-opacity="0.8"/>
+  <g transform="translate(22,513)">
+    <ellipse cx="0" cy="-11" rx="7" ry="10" fill="url(#mp1)" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-11" rx="7" ry="10" fill="url(#mp3)" transform="rotate(72)"/>
+    <ellipse cx="0" cy="-11" rx="7" ry="10" fill="url(#mp2)" transform="rotate(144)"/>
+    <ellipse cx="0" cy="-11" rx="7" ry="10" fill="url(#mp4)" transform="rotate(216)"/>
+    <ellipse cx="0" cy="-11" rx="7" ry="10" fill="url(#mp1)" transform="rotate(288)"/>
+    <circle  cx="0" cy="0"   r="5"  fill="#ffd4ec"/>
+  </g>
+  <g transform="translate(58,537)">
+    <ellipse cx="0" cy="-9" rx="5.5" ry="9" fill="url(#mp4)" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-9" rx="5.5" ry="9" fill="url(#mp2)" transform="rotate(72)"/>
+    <ellipse cx="0" cy="-9" rx="5.5" ry="9" fill="url(#mp3)" transform="rotate(144)"/>
+    <ellipse cx="0" cy="-9" rx="5.5" ry="9" fill="url(#mp1)" transform="rotate(216)"/>
+    <ellipse cx="0" cy="-9" rx="5.5" ry="9" fill="url(#mp4)" transform="rotate(288)"/>
+    <circle  cx="0" cy="0"  r="4"  fill="#ffd0e8"/>
+  </g>
+
+  <!-- ════════════ RIGHT PARTIAL POT ════════════ -->
+  <rect x="340" y="674" width="98"  height="12" rx="6" fill="#a06040"/>
+  <path d="M348 686 Q389 734 430 686 Z" fill="url(#mpot1)"/>
+  <rect x="352" y="636" width="74"  height="52" rx="6" fill="url(#mpot2)"/>
+  <rect x="352" y="636" width="74"  height="10" rx="5" fill="#e0a070"/>
+  <ellipse cx="389" cy="642" rx="33" ry="7" fill="#5a3820"/>
+  <line x1="389" y1="642" x2="372" y2="510" stroke="url(#mstem)" stroke-width="4" stroke-linecap="round"/>
+  <line x1="389" y1="642" x2="410" y2="530" stroke="url(#mstem)" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="382" cy="570" rx="18" ry="7" fill="url(#mleaf)" transform="rotate(25 382 570)" fill-opacity="0.8"/>
+  <g transform="translate(372,505)">
+    <ellipse cx="0" cy="-11" rx="7" ry="10" fill="url(#mp3)" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-11" rx="7" ry="10" fill="url(#mp1)" transform="rotate(72)"/>
+    <ellipse cx="0" cy="-11" rx="7" ry="10" fill="url(#mp4)" transform="rotate(144)"/>
+    <ellipse cx="0" cy="-11" rx="7" ry="10" fill="url(#mp2)" transform="rotate(216)"/>
+    <ellipse cx="0" cy="-11" rx="7" ry="10" fill="url(#mp3)" transform="rotate(288)"/>
+    <circle  cx="0" cy="0"   r="5"  fill="#ffd0e4"/>
+  </g>
+  <g transform="translate(410,525)">
+    <ellipse cx="0" cy="-9" rx="5.5" ry="9" fill="url(#mp2)" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-9" rx="5.5" ry="9" fill="url(#mp4)" transform="rotate(72)"/>
+    <ellipse cx="0" cy="-9" rx="5.5" ry="9" fill="url(#mp1)" transform="rotate(144)"/>
+    <ellipse cx="0" cy="-9" rx="5.5" ry="9" fill="url(#mp3)" transform="rotate(216)"/>
+    <ellipse cx="0" cy="-9" rx="5.5" ry="9" fill="url(#mp2)" transform="rotate(288)"/>
+    <circle  cx="0" cy="0"  r="4"  fill="#ffcce8"/>
+  </g>
+</svg>
