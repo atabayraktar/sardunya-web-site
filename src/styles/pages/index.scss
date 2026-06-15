@@ -2289,6 +2289,8 @@ button { font-family: inherit; }
   .rooms__grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .header__link { font-size: 0.7375rem; }
 }
 
 // ─── TABLET LANDSCAPE ────────────────────────────────────────────────────────
@@ -2321,6 +2323,8 @@ button { font-family: inherit; }
   .transport__layout {
     grid-template-columns: 1.4fr 1fr;
   }
+
+  .header__link { font-size: 0.7375rem; }
 }
 
 // iPad Pro landscape (1366px h=1024)
