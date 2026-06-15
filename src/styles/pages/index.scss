@@ -836,8 +836,8 @@ button { font-family: inherit; }
 
 .room-popup {
   &__content {
-    padding: 1rem 12px 1.375rem;
-    @media (max-width: 639px) { padding: 0.875rem 10px 1.125rem; }
+    padding: 0.625rem 10px 0.875rem;
+    @media (max-width: 639px) { padding: 0.5rem 8px 0.75rem; }
   }
 
   &__variants {
@@ -1830,12 +1830,12 @@ button { font-family: inherit; }
 
 // ─── ROOM POPUP SWIPER ───────────────────────────────────────────────────────
 .room-popup__swiper {
-  margin: 12px 12px 0;
+  margin: 8px 8px 0;
   border-radius: 12px;
   overflow: hidden;
 
   .swiper { border-radius: 12px; }
-  @media (max-width: 639px) { margin: 10px 10px 0; border-radius: 10px; .swiper { border-radius: 10px; } }
+  @media (max-width: 639px) { margin: 8px 8px 0; border-radius: 10px; .swiper { border-radius: 10px; } }
 
   .room-popup__slide {
     aspect-ratio: 4/3;
