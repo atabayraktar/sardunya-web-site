@@ -267,6 +267,14 @@ export default function Home({ locales }) {
   const scrollLockY = useRef(0);
   const [closingPopup, setClosingPopup] = useState(false);
   const [closingRoom,  setClosingRoom]  = useState(false);
+  const [isMobile,     setIsMobile]     = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
 
   const openPopup = () => { setFormErrors({}); setPopupOpen(true); };
 
@@ -595,32 +603,68 @@ export default function Home({ locales }) {
             <span className="section-label">{t.roomsSection.label}</span>
             <h2 className="section-title">{t.roomsSection.title}</h2>
           </div>
-          <div className="rooms__grid">
-            {t.roomItems.map((r, i) => (
-              <div
-                key={i}
-                className="room-card"
-                onClick={() => {
-                  if (i === 1) { setRoomVariant("deluxe"); setRoomPopup({ ...r, hasVariants: true, variantImgs: ROOM_IMGS[1] }); }
-                  else setRoomPopup({ ...r, imgs: ROOM_IMGS[i] });
-                }}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => {
-                  if (e.key !== "Enter") return;
-                  if (i === 1) { setRoomVariant("deluxe"); setRoomPopup({ ...r, hasVariants: true, variantImgs: ROOM_IMGS[1] }); }
-                  else setRoomPopup({ ...r, imgs: ROOM_IMGS[i] });
-                }}
-              >
-                <div className="room-card__image">
-                  <img src={Array.isArray(ROOM_IMGS[i]) ? ROOM_IMGS[i][0] : ROOM_IMGS[i].deluxe[0]} alt={r.name} />
+          {isMobile ? (
+            <Swiper
+              modules={[Autoplay]}
+              slidesPerView={1}
+              loop={true}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              className="rooms__swiper"
+            >
+              {t.roomItems.map((r, i) => (
+                <SwiperSlide key={i}>
+                  <div
+                    className="room-card"
+                    onClick={() => {
+                      if (i === 1) { setRoomVariant("deluxe"); setRoomPopup({ ...r, hasVariants: true, variantImgs: ROOM_IMGS[1] }); }
+                      else setRoomPopup({ ...r, imgs: ROOM_IMGS[i] });
+                    }}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                      if (e.key !== "Enter") return;
+                      if (i === 1) { setRoomVariant("deluxe"); setRoomPopup({ ...r, hasVariants: true, variantImgs: ROOM_IMGS[1] }); }
+                      else setRoomPopup({ ...r, imgs: ROOM_IMGS[i] });
+                    }}
+                  >
+                    <div className="room-card__image">
+                      <img src={Array.isArray(ROOM_IMGS[i]) ? ROOM_IMGS[i][0] : ROOM_IMGS[i].deluxe[0]} alt={r.name} />
+                    </div>
+                    <div className="room-card__overlay">
+                      <h3 className="room-card__name">{r.name}</h3>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          ) : (
+            <div className="rooms__grid">
+              {t.roomItems.map((r, i) => (
+                <div
+                  key={i}
+                  className="room-card"
+                  onClick={() => {
+                    if (i === 1) { setRoomVariant("deluxe"); setRoomPopup({ ...r, hasVariants: true, variantImgs: ROOM_IMGS[1] }); }
+                    else setRoomPopup({ ...r, imgs: ROOM_IMGS[i] });
+                  }}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key !== "Enter") return;
+                    if (i === 1) { setRoomVariant("deluxe"); setRoomPopup({ ...r, hasVariants: true, variantImgs: ROOM_IMGS[1] }); }
+                    else setRoomPopup({ ...r, imgs: ROOM_IMGS[i] });
+                  }}
+                >
+                  <div className="room-card__image">
+                    <img src={Array.isArray(ROOM_IMGS[i]) ? ROOM_IMGS[i][0] : ROOM_IMGS[i].deluxe[0]} alt={r.name} />
+                  </div>
+                  <div className="room-card__overlay">
+                    <h3 className="room-card__name">{r.name}</h3>
+                  </div>
                 </div>
-                <div className="room-card__overlay">
-                  <h3 className="room-card__name">{r.name}</h3>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -651,19 +695,43 @@ export default function Home({ locales }) {
             <h2 className="section-title">{t.facilitiesSection.title}</h2>
             <p className="section-sub">{t.facilitiesSection.sub}</p>
           </div>
-          <div className="facilities__grid">
-            {t.facilityItems.map((f, i) => (
-              <div key={f.title} className="fac-card">
-                <div className="fac-card__image" onClick={() => setLightbox({ imgs: FAC_IMGS, idx: i })} style={{ cursor: "zoom-in" }}>
-                  <img src={FAC_IMGS[i]} alt={f.title} loading="lazy" />
+          {isMobile ? (
+            <Swiper
+              modules={[Autoplay]}
+              slidesPerView={1}
+              loop={true}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              className="fac__swiper"
+            >
+              {t.facilityItems.map((f, i) => (
+                <SwiperSlide key={f.title}>
+                  <div className="fac-card">
+                    <div className="fac-card__image" onClick={() => setLightbox({ imgs: FAC_IMGS, idx: i })} style={{ cursor: "zoom-in" }}>
+                      <img src={FAC_IMGS[i]} alt={f.title} loading="lazy" />
+                    </div>
+                    <div className="fac-card__body">
+                      <h3 className="fac-card__title">{f.title}</h3>
+                      <p className="fac-card__desc">{f.desc}</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          ) : (
+            <div className="facilities__grid">
+              {t.facilityItems.map((f, i) => (
+                <div key={f.title} className="fac-card">
+                  <div className="fac-card__image" onClick={() => setLightbox({ imgs: FAC_IMGS, idx: i })} style={{ cursor: "zoom-in" }}>
+                    <img src={FAC_IMGS[i]} alt={f.title} loading="lazy" />
+                  </div>
+                  <div className="fac-card__body">
+                    <h3 className="fac-card__title">{f.title}</h3>
+                    <p className="fac-card__desc">{f.desc}</p>
+                  </div>
                 </div>
-                <div className="fac-card__body">
-                  <h3 className="fac-card__title">{f.title}</h3>
-                  <p className="fac-card__desc">{f.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

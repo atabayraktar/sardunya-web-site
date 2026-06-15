@@ -2270,3 +2270,15 @@ button { font-family: inherit; }
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+// ─── MOBILE SWIPERS ──────────────────────────────────────────────────────────
+.rooms__swiper,
+.fac__swiper {
+  width: 100%;
+  overflow: hidden;
+
+  .room-card,
+  .fac-card {
+    width: 100%;
+  }
+}
