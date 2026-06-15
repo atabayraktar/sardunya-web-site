@@ -710,7 +710,7 @@ export default function Home({ locales }) {
             <div className="contact-block">
               <h3 className="contact-block__title">{t.contactSection.contactTitle}</h3>
               <div className="contact-block__items">
-                <div className="contact-block__item"><MapIcon /> {t.contactSection.address}</div>
+                <a href="https://maps.app.goo.gl/qKRSRGS96k75n5Kn7" target="_blank" rel="noopener noreferrer" className="contact-block__item contact-block__item--link"><MapIcon /> {t.contactSection.address}</a>
                 <div className="contact-block__item">
                   <PhoneIcon />
                   <span className="contact-block__phone-list">
@@ -825,7 +825,7 @@ export default function Home({ locales }) {
             </a>
             <div className="footer__info">
               <div className="footer__contacts">
-                <a href="https://www.google.com/maps/search/?api=1&query=40.1553,26.4142" target="_blank" rel="noopener noreferrer" className="footer__contact-item footer__contact-item--link"><MapIcon /> {t.contactSection.addressShort}</a>
+                <a href="https://maps.app.goo.gl/qKRSRGS96k75n5Kn7" target="_blank" rel="noopener noreferrer" className="footer__contact-item footer__contact-item--link"><MapIcon /> {t.contactSection.addressShort}</a>
                 <div className="footer__contact-item"><PhoneIcon /> {t.contactSection.phones.map((phone, i) => (
                   <span key={phone}>{i > 0 && " / "}<a href={`tel:${phone.replace(/\s/g, "")}`} className="footer__phone-link">{phone}</a></span>
                 ))}</div>
