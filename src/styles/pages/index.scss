@@ -98,14 +98,14 @@ button { font-family: inherit; }
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--pink);
+  color: var(--pink-dark);
   margin-bottom: 0.625rem;
   &::before {
     content: '';
     display: block;
     width: 22px;
     height: 2px;
-    background: var(--pink);
+    background: var(--pink-dark);
     border-radius: 2px;
   }
 }
@@ -126,7 +126,7 @@ button { font-family: inherit; }
 .section-sub {
   font-size: 1.0625rem;
   line-height: 1.75;
-  color: rgba(26,26,46,0.55);
+  color: rgba(26,26,46,0.72);
   max-width: 560px;
 }
 .section-sub--light { color: rgba(255,255,255,0.55); }
@@ -189,7 +189,7 @@ button { font-family: inherit; }
 // ─── TOP BAR ─────────────────────────────────────────────────────────────────
 .topbar {
   background: var(--wine-deep);
-  padding: 0.55rem 0;
+  padding: 0.75rem 0;
 
   &__inner {
     display: flex;
@@ -254,7 +254,7 @@ button { font-family: inherit; }
     color: rgba(255,255,255,0.65);
     transition: color 0.2s;
     &:hover { color: var(--pink-light); }
-    svg { width: 13px; height: 13px; flex-shrink: 0; }
+    svg { width: 15px; height: 15px; flex-shrink: 0; }
   }
   &__right {
     display: flex;
@@ -356,14 +356,14 @@ button { font-family: inherit; }
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 26px;
-    height: 26px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background: rgba(255,255,255,0.07);
     color: rgba(255,255,255,0.6);
     transition: background 0.2s, color 0.2s;
     &:hover { background: var(--pink); color: var(--white); }
-    svg { width: 12px; height: 12px; }
+    svg { width: 15px; height: 15px; }
   }
 }
 
@@ -734,7 +734,8 @@ button { font-family: inherit; }
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    @media (min-width: 640px) { grid-template-columns: repeat(3, 1fr); }
+    @media (min-width: 560px) { grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: 960px) { grid-template-columns: repeat(3, 1fr); }
   }
 }
 
@@ -969,7 +970,7 @@ button { font-family: inherit; }
   &__desc {
     font-size: 0.8125rem;
     line-height: 1.6;
-    color: rgba(26,26,46,0.58);
+    color: rgba(26,26,46,0.72);
   }
 }
 
@@ -1034,7 +1035,7 @@ button { font-family: inherit; }
   &__desc {
     font-size: 0.9rem;
     line-height: 1.65;
-    color: rgba(26,26,46,0.6);
+    color: rgba(26,26,46,0.72);
   }
 }
 
@@ -1193,7 +1194,7 @@ button { font-family: inherit; }
     font-family: var(--font-display);
     font-size: 0.9375rem;
     font-weight: 600;
-    color: rgba(26,26,46,0.5);
+    color: rgba(26,26,46,0.68);
     text-transform: uppercase;
     letter-spacing: 0.08em;
     margin: 0 0 1rem;
@@ -1268,7 +1269,7 @@ button { font-family: inherit; }
   &__distance {
     font-size: 0.625rem;
     font-weight: 700;
-    color: rgba(26,26,46,0.45);
+    color: rgba(26,26,46,0.68);
     margin-top: 0.15rem;
     letter-spacing: 0.02em;
   }
@@ -1603,11 +1604,20 @@ button { font-family: inherit; }
     }
   }
 
+  &__logo-link {
+    flex-shrink: 0;
+    display: inline-block;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+    @media (max-width: 767px) { align-self: center; margin: 0 auto; }
+    &:hover { opacity: 0.75; }
+  }
+
   &__logo {
     height: 48px;
     width: auto;
+    display: block;
     flex-shrink: 0;
-    @media (max-width: 767px) { align-self: center; margin: 0 auto; }
   }
 
   &__info {
@@ -1652,7 +1662,7 @@ button { font-family: inherit; }
     align-items: center;
     gap: 0.5rem;
     font-size: 0.875rem;
-    color: rgba(255,255,255,0.42);
+    color: rgba(255,255,255,0.65);
     line-height: 1.5;
     svg { width: 13px; height: 13px; flex-shrink: 0; color: var(--pink-light); }
   }
@@ -1664,7 +1674,7 @@ button { font-family: inherit; }
 
   &__copy {
     font-size: 0.75rem;
-    color: rgba(255,255,255,0.25);
+    color: rgba(255,255,255,0.75);
   }
 }
 
@@ -2077,5 +2087,178 @@ button { font-family: inherit; }
 
   &:active {
     transform: scale(0.95);
+  }
+}
+
+// ─── MOBILE LANDSCAPE ────────────────────────────────────────────────────────
+// Phones in landscape: height < 600px (tablets in landscape have height ≥ 768px)
+@media (orientation: landscape) and (max-height: 599px) {
+  .hero {
+    min-height: auto;
+
+    &__content {
+      padding: 2rem 1.25rem 1.25rem;
+    }
+
+    &__title {
+      font-size: clamp(1.75rem, 5vw, 2.75rem);
+      margin-bottom: 0.625rem;
+    }
+
+    &__sub {
+      font-size: 0.9375rem;
+      margin-bottom: 1rem;
+    }
+
+    &__actions {
+      margin-bottom: 0.875rem;
+      gap: 0.625rem;
+    }
+
+    &__pension-note {
+      margin-bottom: 1.5rem;
+      font-size: 0.8125rem;
+    }
+  }
+
+  .hero__stats-inner {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .hero__stat {
+    padding: 0.875rem 0.5rem;
+  }
+
+  .hero__stat-val {
+    font-size: 1.5rem;
+  }
+
+  .topbar {
+    padding: 0.3rem 0;
+  }
+
+  .rooms__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  section:not(.hero) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+// ─── TABLET PORTRAIT ─────────────────────────────────────────────────────────
+// iPad mini (768px), iPad Air (820px), iPad Pro (1024px) — portrait
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  .hero {
+    min-height: 72vh;
+
+    &__content {
+      padding: 4.5rem 2.5rem 3rem;
+    }
+
+    &__title {
+      font-size: clamp(3rem, 6.5vw, 4.5rem);
+    }
+
+    &__sub {
+      max-width: 560px;
+    }
+  }
+
+  .hero__stats-inner {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .rooms__grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .services__grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .facilities__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .transport__layout {
+    grid-template-columns: 1.4fr 1fr;
+  }
+
+  .popup {
+    max-width: 560px;
+    padding: 2.5rem;
+  }
+
+  .certs__grid {
+    gap: 1.25rem;
+  }
+
+  .certs__card {
+    flex: 1 1 150px;
+    max-width: 190px;
+  }
+}
+
+// iPad Pro portrait (1024px portrait — treated as near-desktop)
+@media (min-width: 1024px) and (max-width: 1179px) and (orientation: portrait) {
+  .hero {
+    min-height: 72vh;
+
+    &__content {
+      padding: 5rem 3rem 3.5rem;
+    }
+  }
+
+  .services__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .rooms__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// ─── TABLET LANDSCAPE ────────────────────────────────────────────────────────
+// iPad mini landscape (1024px h=768), iPad Air landscape (1180px h=820)
+@media (min-width: 1024px) and (max-width: 1279px) and (orientation: landscape) and (min-height: 700px) {
+  .hero {
+    min-height: 78vh;
+
+    &__content {
+      padding: 4.5rem 3rem 3rem;
+    }
+
+    &__title {
+      font-size: clamp(3rem, 5.5vw, 4.5rem);
+    }
+  }
+
+  .rooms__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .services__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .facilities__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .transport__layout {
+    grid-template-columns: 1.4fr 1fr;
+  }
+}
+
+// iPad Pro landscape (1366px h=1024)
+@media (min-width: 1280px) and (max-width: 1400px) and (orientation: landscape) and (min-height: 950px) {
+  .hero {
+    min-height: 80vh;
+  }
+
+  .rooms__grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

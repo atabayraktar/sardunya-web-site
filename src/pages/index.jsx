@@ -54,85 +54,85 @@ function CustomSelect({ id, placeholder, options, hasError, onClearError }) {
 // ─── Static image data (not translated) ──────────────────────────────────────
 const ROOM_IMGS = [
   [
-    "/images/1-kisilik-1.jpeg",
-    "/images/1-kisilik-2.jpeg",
-    "/images/1-kisilik-3.jpeg",
-    "/images/1-kisilik-4.jpeg",
-    "/images/1-kisilik-5.jpeg",
+    "/images/1-kisilik-1.webp",
+    "/images/1-kisilik-2.webp",
+    "/images/1-kisilik-3.webp",
+    "/images/1-kisilik-4.webp",
+    "/images/1-kisilik-5.webp",
   ],
   {
     normal: [
-      "/images/2-kisilik-normal-1.jpeg",
-      "/images/2-kisilik-normal-2.jpeg",
-      "/images/2-kisilik-normal-3.jpeg",
-      "/images/2-kisilik-normal-4.jpeg",
+      "/images/2-kisilik-normal-1.webp",
+      "/images/2-kisilik-normal-2.webp",
+      "/images/2-kisilik-normal-3.webp",
+      "/images/2-kisilik-normal-4.webp",
     ],
     deluxe: [
-      "/images/2-kisilik-deluxe-1.jpeg",
-      "/images/2-kisilik-deluxe-2.jpeg",
-      "/images/2-kisilik-deluxe-3.jpeg",
-      "/images/2-kisilik-deluxe-4.jpeg",
-      "/images/2-kisilik-deluxe-5.jpeg",
+      "/images/2-kisilik-deluxe-1.webp",
+      "/images/2-kisilik-deluxe-2.webp",
+      "/images/2-kisilik-deluxe-3.webp",
+      "/images/2-kisilik-deluxe-4.webp",
+      "/images/2-kisilik-deluxe-5.webp",
     ],
   },
   [
-    "/images/3-kisilik-1.jpeg",
-    "/images/3-kisilik-2.jpeg",
-    "/images/3-kisilik-3.jpeg",
-    "/images/3-kisilik-4.jpeg",
-    "/images/3-kisilik-5.jpeg",
-    "/images/3-kisilik-6.jpeg",
+    "/images/3-kisilik-1.webp",
+    "/images/3-kisilik-2.webp",
+    "/images/3-kisilik-3.webp",
+    "/images/3-kisilik-4.webp",
+    "/images/3-kisilik-5.webp",
+    "/images/3-kisilik-6.webp",
   ],
 ];
 
 const FAC_IMGS = [
-  "/images/etut.jpg",
-  "/images/dinlenme.jpeg",
-  "/images/yemekhane.jpg",
-  "/images/mutfak.png",
+  "/images/etut.webp",
+  "/images/dinlenme.webp",
+  "/images/yemekhane.webp",
+  "/images/mutfak.webp",
 ];
 
 const GALLERY_IMGS = [
   // Dış & genel
-  { src: "/images/dis-foto.jpeg",           alt: "Sardunya Kız Öğrenci Yurdu" },
-  { src: "/images/manzara.jpg",             alt: "Manzara" },
+  { src: "/images/dis-foto.webp",           alt: "Sardunya Kız Öğrenci Yurdu" },
+  { src: "/images/manzara.webp",             alt: "Manzara" },
   // Ek galeri fotoğrafları
-  { src: "/images/galeri-1.jpeg",           alt: "Sardunya Kız Öğrenci Yurdu" },
-  { src: "/images/galeri-2.jpeg",           alt: "Sardunya Kız Öğrenci Yurdu" },
-  { src: "/images/galeri-3.jpeg",           alt: "Sardunya Kız Öğrenci Yurdu" },
-  { src: "/images/galeri-4.jpeg",           alt: "Sardunya Kız Öğrenci Yurdu" },
-  { src: "/images/galeri-5.jpeg",           alt: "Sardunya Kız Öğrenci Yurdu" },
-  { src: "/images/galeri-6.jpeg",           alt: "Sardunya Kız Öğrenci Yurdu" },
-  { src: "/images/galeri-7.jpeg",           alt: "Sardunya Kız Öğrenci Yurdu" },
+  { src: "/images/galeri-1.webp",           alt: "Sardunya Kız Öğrenci Yurdu" },
+  { src: "/images/galeri-2.webp",           alt: "Sardunya Kız Öğrenci Yurdu" },
+  { src: "/images/galeri-3.webp",           alt: "Sardunya Kız Öğrenci Yurdu" },
+  { src: "/images/galeri-4.webp",           alt: "Sardunya Kız Öğrenci Yurdu" },
+  { src: "/images/galeri-5.webp",           alt: "Sardunya Kız Öğrenci Yurdu" },
+  { src: "/images/galeri-6.webp",           alt: "Sardunya Kız Öğrenci Yurdu" },
+  { src: "/images/galeri-7.webp",           alt: "Sardunya Kız Öğrenci Yurdu" },
   // Tek kişilik oda
-  { src: "/images/1-kisilik-1.jpeg",        alt: "Tek Kişilik Oda" },
-  { src: "/images/1-kisilik-2.jpeg",        alt: "Tek Kişilik Oda" },
-  { src: "/images/1-kisilik-3.jpeg",        alt: "Tek Kişilik Oda" },
-  { src: "/images/1-kisilik-4.jpeg",        alt: "Tek Kişilik Oda" },
-  { src: "/images/1-kisilik-5.jpeg",        alt: "Tek Kişilik Oda" },
+  { src: "/images/1-kisilik-1.webp",        alt: "Tek Kişilik Oda" },
+  { src: "/images/1-kisilik-2.webp",        alt: "Tek Kişilik Oda" },
+  { src: "/images/1-kisilik-3.webp",        alt: "Tek Kişilik Oda" },
+  { src: "/images/1-kisilik-4.webp",        alt: "Tek Kişilik Oda" },
+  { src: "/images/1-kisilik-5.webp",        alt: "Tek Kişilik Oda" },
   // Çift kişilik normal
-  { src: "/images/2-kisilik-normal-1.jpeg", alt: "Çift Kişilik Oda" },
-  { src: "/images/2-kisilik-normal-2.jpeg", alt: "Çift Kişilik Oda" },
-  { src: "/images/2-kisilik-normal-3.jpeg", alt: "Çift Kişilik Oda" },
-  { src: "/images/2-kisilik-normal-4.jpeg", alt: "Çift Kişilik Oda" },
+  { src: "/images/2-kisilik-normal-1.webp", alt: "Çift Kişilik Oda" },
+  { src: "/images/2-kisilik-normal-2.webp", alt: "Çift Kişilik Oda" },
+  { src: "/images/2-kisilik-normal-3.webp", alt: "Çift Kişilik Oda" },
+  { src: "/images/2-kisilik-normal-4.webp", alt: "Çift Kişilik Oda" },
   // Çift kişilik deluxe
-  { src: "/images/2-kisilik-deluxe-1.jpeg", alt: "Çift Kişilik Oda Deluxe" },
-  { src: "/images/2-kisilik-deluxe-2.jpeg", alt: "Çift Kişilik Oda Deluxe" },
-  { src: "/images/2-kisilik-deluxe-3.jpeg", alt: "Çift Kişilik Oda Deluxe" },
-  { src: "/images/2-kisilik-deluxe-4.jpeg", alt: "Çift Kişilik Oda Deluxe" },
-  { src: "/images/2-kisilik-deluxe-5.jpeg", alt: "Çift Kişilik Oda Deluxe" },
+  { src: "/images/2-kisilik-deluxe-1.webp", alt: "Çift Kişilik Oda Deluxe" },
+  { src: "/images/2-kisilik-deluxe-2.webp", alt: "Çift Kişilik Oda Deluxe" },
+  { src: "/images/2-kisilik-deluxe-3.webp", alt: "Çift Kişilik Oda Deluxe" },
+  { src: "/images/2-kisilik-deluxe-4.webp", alt: "Çift Kişilik Oda Deluxe" },
+  { src: "/images/2-kisilik-deluxe-5.webp", alt: "Çift Kişilik Oda Deluxe" },
   // Üç kişilik oda
-  { src: "/images/3-kisilik-1.jpeg",        alt: "Üç Kişilik Oda" },
-  { src: "/images/3-kisilik-2.jpeg",        alt: "Üç Kişilik Oda" },
-  { src: "/images/3-kisilik-3.jpeg",        alt: "Üç Kişilik Oda" },
-  { src: "/images/3-kisilik-4.jpeg",        alt: "Üç Kişilik Oda" },
-  { src: "/images/3-kisilik-5.jpeg",        alt: "Üç Kişilik Oda" },
-  { src: "/images/3-kisilik-6.jpeg",        alt: "Üç Kişilik Oda" },
+  { src: "/images/3-kisilik-1.webp",        alt: "Üç Kişilik Oda" },
+  { src: "/images/3-kisilik-2.webp",        alt: "Üç Kişilik Oda" },
+  { src: "/images/3-kisilik-3.webp",        alt: "Üç Kişilik Oda" },
+  { src: "/images/3-kisilik-4.webp",        alt: "Üç Kişilik Oda" },
+  { src: "/images/3-kisilik-5.webp",        alt: "Üç Kişilik Oda" },
+  { src: "/images/3-kisilik-6.webp",        alt: "Üç Kişilik Oda" },
   // Tesisler
-  { src: "/images/etut.jpg",                alt: "Etüt Salonu" },
-  { src: "/images/dinlenme.jpeg",           alt: "Dinlenme Alanı" },
-  { src: "/images/yemekhane.jpg",           alt: "Yemekhane" },
-  { src: "/images/mutfak.png",              alt: "Mutfak" },
+  { src: "/images/etut.webp",                alt: "Etüt Salonu" },
+  { src: "/images/dinlenme.webp",           alt: "Dinlenme Alanı" },
+  { src: "/images/yemekhane.webp",           alt: "Yemekhane" },
+  { src: "/images/mutfak.webp",              alt: "Mutfak" },
 ];
 
 // ─── SVG Icons ────────────────────────────────────────────────────────────────
@@ -348,6 +348,72 @@ export default function Home({ locales }) {
         <meta name="description" content={t.meta.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+
+        {/* SEO */}
+        <meta name="keywords" content="çanakkale kız yurdu, çanakkale kız öğrenci yurdu, çanakkale öğrenci yurdu, çanakkale pansiyon, çanakkale kız pansiyonu, çanakkale yurt, sardunya yurt, sardunya kız yurdu, çanakkale 18 mart üniversitesi yurt, kız pansiyon çanakkale, üniversite yurdu çanakkale, güvenli kız yurdu, öğrenci pansiyonu çanakkale, çanakkale yaz pansiyonu, kız öğrenci yurdu fiyatları çanakkale" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Sardunya Kız Öğrenci Yurdu" />
+        <link rel="canonical" href="https://sardunyakizyurdu.com" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://sardunyakizyurdu.com" />
+        <meta property="og:title" content="Sardunya Kız Öğrenci Yurdu | Çanakkale" />
+        <meta property="og:description" content="Çanakkale kız öğrenci yurdu ve pansiyonu. 15 yıllık deneyimle 18 Mart Üniversitesi'ne 2 dakika mesafede güvenli, konforlu yaşam. Yaz pansiyonu hizmeti mevcuttur." />
+        <meta property="og:image" content="https://sardunyakizyurdu.com/images/dis-foto.webp" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="tr_TR" />
+        <meta property="og:site_name" content="Sardunya Kız Öğrenci Yurdu" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Sardunya Kız Öğrenci Yurdu | Çanakkale" />
+        <meta name="twitter:description" content="Çanakkale kız öğrenci yurdu ve pansiyonu. 18 Mart Üniversitesi'ne 2 dakika mesafede güvenli yaşam." />
+        <meta name="twitter:image" content="https://sardunyakizyurdu.com/images/dis-foto.webp" />
+
+        {/* Geo */}
+        <meta name="geo.region" content="TR-17" />
+        <meta name="geo.placename" content="Çanakkale" />
+        <meta name="geo.position" content="40.1553;26.4142" />
+        <meta name="ICBM" content="40.1553, 26.4142" />
+
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": ["LodgingBusiness", "LocalBusiness"],
+          "name": "Sardunya Kız Öğrenci Yurdu",
+          "alternateName": ["Sardunya Kız Yurdu", "Sardunya Pansiyon Çanakkale", "Sardunya Öğrenci Pansiyonu"],
+          "description": "Çanakkale'nin en güvenli ve konforlu kız öğrenci yurdu. 15 yıllık deneyimle 18 Mart Üniversitesi'ne 2 dakika yürüme mesafesinde hizmet vermekteyiz. Yaz dönemlerinde ailelere özel pansiyon hizmeti sunulmaktadır.",
+          "url": "https://sardunyakizyurdu.com",
+          "image": "https://sardunyakizyurdu.com/images/dis-foto.webp",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Çanakkale",
+            "addressRegion": "Çanakkale",
+            "postalCode": "17100",
+            "addressCountry": "TR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "40.1553",
+            "longitude": "26.4142"
+          },
+          "openingHours": "Mo-Su 00:00-23:59",
+          "priceRange": "₺₺",
+          "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "Ücretsiz WiFi", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "7/24 Güvenlik", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Yemekhane", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Etüt Salonu", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Çamaşırhane", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Pansiyon Hizmeti", "value": true }
+          ],
+          "sameAs": [
+            "https://www.instagram.com/sardunyakizyurdu",
+            "https://www.facebook.com/profile.php?id=100070014077020"
+          ]
+        }) }} />
       </Head>
 
       {/* ── STICKY SITE HEADER WRAPPER ── */}
@@ -385,14 +451,14 @@ export default function Home({ locales }) {
                 </div>
               </div>
               <div className="topbar__contact">
-                <span className="topbar__item"><PhoneIcon /> {t.contactSection.phones.map((phone, i) => (
-                  <span key={phone}>{i > 0 && " / "}<a href={`tel:${phone.replace(/\s/g, "")}`} className="topbar__phone-link">{phone}</a></span>
-                ))}</span>
-                <a href={`mailto:${t.contactSection.email}`} className="topbar__item"><MailIcon /> {t.contactSection.email}</a>
                 <div className="topbar__social">
                   <a href="https://www.instagram.com/sardunyakizyurdu" target="_blank" rel="noopener noreferrer" className="topbar__social-link" aria-label="Instagram"><IgIcon /></a>
                   <a href="https://www.facebook.com/profile.php?id=100070014077020" target="_blank" rel="noopener noreferrer" className="topbar__social-link" aria-label="Facebook"><FbIcon /></a>
                 </div>
+                <span className="topbar__item"><PhoneIcon /> {t.contactSection.phones.map((phone, i) => (
+                  <span key={phone}>{i > 0 && " / "}<a href={`tel:${phone.replace(/\s/g, "")}`} className="topbar__phone-link">{phone}</a></span>
+                ))}</span>
+                <a href={`mailto:${t.contactSection.email}`} className="topbar__item"><MailIcon /> {t.contactSection.email}</a>
               </div>
               <div className="topbar__right">
                 <div className={`lang-switcher${langOpen ? " lang-switcher--open" : ""}`} ref={langRef}>
@@ -439,7 +505,7 @@ export default function Home({ locales }) {
                 onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
                 className="header__logo"
               >
-                <img src="/images/logo_white.png" alt="Sardunya Kız Öğrenci Yurdu" />
+                <img src="/images/logo_white.webp" alt="Sardunya Kız Öğrenci Yurdu" width="220" height="44" />
               </a>
               <nav className="header__nav" aria-label="Ana Navigasyon">
                 {t.nav.map((n) => (
@@ -469,9 +535,10 @@ export default function Home({ locales }) {
         </header>
       </div>{/* end .site-header */}
 
+      <main>
       {/* ── HERO ── */}
       <section className="hero">
-        <img src="/images/sardunya_hero.svg" className="hero__bg-svg hero__bg-svg--desktop" aria-hidden alt="" />
+        <img src="/images/sardunya_hero.svg" className="hero__bg-svg hero__bg-svg--desktop" aria-hidden alt="" fetchpriority="high" />
         <img src="/images/sardunya_hero_mobile.svg" className="hero__bg-svg hero__bg-svg--mobile" aria-hidden alt="" />
         <div className="hero__overlay" aria-hidden />
         <div className="hero__content">
@@ -684,7 +751,7 @@ export default function Home({ locales }) {
         <div className="container">
           <div className="about__layout">
             <div className="about__image">
-              <img src="/images/dis-foto.jpeg" alt="Sardunya Kız Öğrenci Yurdu" loading="lazy" />
+              <img src="/images/dis-foto.webp" alt="Sardunya Kız Öğrenci Yurdu" loading="lazy" />
             </div>
             <div>
               <div className="about__head">
@@ -742,14 +809,23 @@ export default function Home({ locales }) {
         </div>
       </section>
 
+      </main>
+
       {/* ── FOOTER ── */}
       <footer className="footer">
         <div className="container">
           <div className="footer__inner">
-            <img src="/images/logo_white.png" alt="Sardunya" className="footer__logo" />
+            <a
+              href="#"
+              onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+              className="footer__logo-link"
+              aria-label="Sayfanın en üstüne git"
+            >
+              <img src="/images/logo_white.webp" alt="Sardunya Kız Öğrenci Yurdu" className="footer__logo" width="220" height="48" />
+            </a>
             <div className="footer__info">
               <div className="footer__contacts">
-                <div className="footer__contact-item"><MapIcon /> {t.contactSection.addressShort}</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=40.1553,26.4142" target="_blank" rel="noopener noreferrer" className="footer__contact-item footer__contact-item--link"><MapIcon /> {t.contactSection.addressShort}</a>
                 <div className="footer__contact-item"><PhoneIcon /> {t.contactSection.phones.map((phone, i) => (
                   <span key={phone}>{i > 0 && " / "}<a href={`tel:${phone.replace(/\s/g, "")}`} className="footer__phone-link">{phone}</a></span>
                 ))}</div>
