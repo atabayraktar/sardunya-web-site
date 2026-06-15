@@ -2305,37 +2305,28 @@ button { font-family: inherit; }
     width: 100%;
   }
 
+  .swiper-slide { height: auto; }
+
   .swiper-button-prev,
   .swiper-button-next {
-    width: 40px;
-    height: 40px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
-    background: rgba(61,10,24,0.55);
-    border: none;
-    color: var(--white);
+    background: rgba(255,255,255,0.88);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    color: var(--pink);
     top: 50%;
     transform: translateY(-50%);
     margin-top: 0;
-    backdrop-filter: blur(4px);
-    transition: background 0.2s;
+    transition: background 0.2s, box-shadow 0.2s;
 
-    &::after {
-      font-family: inherit;
-      font-size: 1.6rem;
-      line-height: 1;
-      font-weight: 300;
-    }
-
-    &:hover { background: rgba(212,96,122,0.55); }
+    &::after { font-size: 0.7rem; font-weight: 900; }
+    &:hover { background: rgba(255,255,255,1); box-shadow: 0 3px 12px rgba(0,0,0,0.2); }
   }
 
-  .swiper-button-prev {
-    left: 6px;
-    &::after { content: '‹'; }
-  }
+  .swiper-button-prev { left: 6px; }
+  .swiper-button-next { right: 6px; }
 
-  .swiper-button-next {
-    right: 6px;
-    &::after { content: '›'; }
-  }
+  .svc-card { height: 100%; }
 }
