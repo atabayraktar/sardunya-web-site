@@ -2189,6 +2189,26 @@ button { font-family: inherit; }
   .section-sub   { font-size: 0.875rem; }
   .section-label { font-size: 0.625rem; }
 
+  // Hakkımızda yan yana
+  .about {
+    padding: 1.5rem 0;
+
+    &__layout {
+      grid-template-columns: 1fr 1.4fr;
+      gap: 1.25rem;
+      align-items: center;
+    }
+
+    &__image {
+      aspect-ratio: 3/2;
+      max-height: 200px;
+    }
+
+    &__head { margin-bottom: 0.75rem; }
+    &__text { font-size: 0.875rem; line-height: 1.6; margin-bottom: 0.875rem; }
+    &__points { gap: 0.5rem; }
+    &__point { font-size: 0.8125rem; }
+  }
 }
 
 // ─── TABLET PORTRAIT ─────────────────────────────────────────────────────────

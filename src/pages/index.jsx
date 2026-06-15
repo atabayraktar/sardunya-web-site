@@ -267,13 +267,16 @@ export default function Home({ locales }) {
   const scrollLockY = useRef(0);
   const [closingPopup, setClosingPopup] = useState(false);
   const [closingRoom,  setClosingRoom]  = useState(false);
-  const [isMobile,     setIsMobile]     = useState(false);
+  const [isMobile,        setIsMobile]        = useState(false);
+  const [isLandscapePhone, setIsLandscapePhone] = useState(false);
 
   useEffect(() => {
     const check = () => {
       const w = window.innerWidth;
       const h = window.innerHeight;
-      setIsMobile(w < 768 || (h < 520 && w < 1024));
+      const lp = h < 520 && w < 1024;
+      setIsLandscapePhone(lp);
+      setIsMobile(w < 768 || lp);
     };
     check();
     window.addEventListener("resize", check);
@@ -613,8 +616,8 @@ export default function Home({ locales }) {
           {isMobile ? (
             <Swiper
               modules={[Autoplay, Navigation]}
-              slidesPerView={1}
-              spaceBetween={16}
+              slidesPerView={isLandscapePhone ? 3 : 1}
+              spaceBetween={12}
               loop={true}
               navigation
               autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -687,7 +690,7 @@ export default function Home({ locales }) {
           {isMobile ? (
             <Swiper
               modules={[Autoplay, Navigation]}
-              slidesPerView={2}
+              slidesPerView={isLandscapePhone ? 3 : 2}
               spaceBetween={12}
               loop={true}
               navigation
@@ -729,8 +732,8 @@ export default function Home({ locales }) {
           {isMobile ? (
             <Swiper
               modules={[Autoplay, Navigation]}
-              slidesPerView={1}
-              spaceBetween={16}
+              slidesPerView={isLandscapePhone ? 2 : 1}
+              spaceBetween={12}
               loop={true}
               navigation
               autoplay={{ delay: 3000, disableOnInteraction: false }}
