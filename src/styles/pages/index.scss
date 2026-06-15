@@ -2295,9 +2295,28 @@ button { font-family: inherit; }
 .fac__swiper {
   width: 100%;
   overflow: hidden;
+  padding-bottom: 0.25rem;
 
   .room-card,
   .fac-card {
     width: 100%;
   }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--pink);
+    box-shadow: 0 2px 8px rgba(212,96,122,0.35);
+    color: #fff;
+    top: 40%;
+
+    &::after { font-size: 0.85rem; font-weight: 700; }
+
+    &:hover { background: var(--pink-dark); }
+  }
+
+  .swiper-button-prev { left: 6px; }
+  .swiper-button-next { right: 6px; }
 }

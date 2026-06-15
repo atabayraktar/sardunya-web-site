@@ -32,12 +32,20 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
-  //body margin reset
   margin: 0;
   padding: 0;
+  overflow-x: clip;
+  min-height: 100%;
+  width: 100%;
+}
+
+#__next {
+  overflow-x: clip;
+  width: 100%;
 }
 
 ::selection {

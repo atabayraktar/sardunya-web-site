@@ -354,7 +354,7 @@ export default function Home({ locales }) {
       <Head>
         <title>{t.meta.title}</title>
         <meta name="description" content={t.meta.description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <link rel="icon" href="/favicon.ico" />
 
         {/* SEO */}
@@ -608,9 +608,11 @@ export default function Home({ locales }) {
           </div>
           {isMobile ? (
             <Swiper
-              modules={[Autoplay]}
+              modules={[Autoplay, Navigation]}
               slidesPerView={1}
+              spaceBetween={16}
               loop={true}
+              navigation
               autoplay={{ delay: 3000, disableOnInteraction: false }}
               className="rooms__swiper"
             >
@@ -700,9 +702,11 @@ export default function Home({ locales }) {
           </div>
           {isMobile ? (
             <Swiper
-              modules={[Autoplay]}
+              modules={[Autoplay, Navigation]}
               slidesPerView={1}
+              spaceBetween={16}
               loop={true}
+              navigation
               autoplay={{ delay: 3000, disableOnInteraction: false }}
               className="fac__swiper"
             >
