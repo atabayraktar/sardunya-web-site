@@ -1752,22 +1752,30 @@ button { font-family: inherit; }
 
   &__close {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    width: 32px;
-    height: 32px;
+    top: 5px;
+    right: 5px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
-    background: rgba(0,0,0,0.06);
+    background: #0000000f;
     border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(26,26,46,0.6);
-    font-size: 1.125rem;
+    color: #1a1a2e99;
+    font-size: 1rem;
     line-height: 1;
-    transition: background 0.2s, color 0.2s;
+    transition: background .2s, color .2s;
     &:hover { background: rgba(212,96,122,0.1); color: var(--pink); }
+
+    @media (max-width: 767px) {
+      top: 4px;
+      right: 4px;
+      width: 28px;
+      height: 28px;
+      font-size: 0.9375rem;
+    }
   }
 
   &__title {
