@@ -680,15 +680,37 @@ export default function Home({ locales }) {
             <span className="section-label">{t.servicesSection.label}</span>
             <h2 className="section-title">{t.servicesSection.title}</h2>
           </div>
-          <div className="services__grid">
-            {t.serviceItems.map((s) => (
-              <div key={s.title} className="svc-card">
-                <div className="svc-card__icon">{ICON_MAP[s.icon]}</div>
-                <h3 className="svc-card__title">{s.title}</h3>
-                <p className="svc-card__desc">{s.desc}</p>
-              </div>
-            ))}
-          </div>
+          {isMobile ? (
+            <Swiper
+              modules={[Autoplay, Navigation]}
+              slidesPerView={2}
+              spaceBetween={12}
+              loop={true}
+              navigation
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              className="svc__swiper"
+            >
+              {t.serviceItems.map((s) => (
+                <SwiperSlide key={s.title}>
+                  <div className="svc-card">
+                    <div className="svc-card__icon">{ICON_MAP[s.icon]}</div>
+                    <h3 className="svc-card__title">{s.title}</h3>
+                    <p className="svc-card__desc">{s.desc}</p>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          ) : (
+            <div className="services__grid">
+              {t.serviceItems.map((s) => (
+                <div key={s.title} className="svc-card">
+                  <div className="svc-card__icon">{ICON_MAP[s.icon]}</div>
+                  <h3 className="svc-card__title">{s.title}</h3>
+                  <p className="svc-card__desc">{s.desc}</p>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

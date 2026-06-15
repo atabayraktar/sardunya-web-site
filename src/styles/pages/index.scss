@@ -2292,31 +2292,50 @@ button { font-family: inherit; }
 
 // ─── MOBILE SWIPERS ──────────────────────────────────────────────────────────
 .rooms__swiper,
-.fac__swiper {
+.fac__swiper,
+.svc__swiper {
   width: 100%;
   overflow: hidden;
   padding-bottom: 0.25rem;
+  position: relative;
 
   .room-card,
-  .fac-card {
+  .fac-card,
+  .svc-card {
     width: 100%;
   }
 
   .swiper-button-prev,
   .swiper-button-next {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background: var(--pink);
-    box-shadow: 0 2px 8px rgba(212,96,122,0.35);
-    color: #fff;
-    top: 40%;
+    background: rgba(61,10,24,0.55);
+    border: none;
+    color: var(--white);
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 0;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s;
 
-    &::after { font-size: 0.85rem; font-weight: 700; }
+    &::after {
+      font-family: inherit;
+      font-size: 1.6rem;
+      line-height: 1;
+      font-weight: 300;
+    }
 
-    &:hover { background: var(--pink-dark); }
+    &:hover { background: rgba(212,96,122,0.55); }
   }
 
-  .swiper-button-prev { left: 6px; }
-  .swiper-button-next { right: 6px; }
+  .swiper-button-prev {
+    left: 6px;
+    &::after { content: '‹'; }
+  }
+
+  .swiper-button-next {
+    right: 6px;
+    &::after { content: '›'; }
+  }
 }
